@@ -1,0 +1,17 @@
+{
+  "inq-0072": {
+    "type": "quality_complaint",
+    "expected_docs": ["qa-returns-dtc", "war-summary"],
+    "reason": "2026-11-07 review of a blind-label disagreement: the writer turned the scenario into a demand for a refund or replacement with no request for help. LABELING.md rule 2 makes the main request a remedy, so quality_complaint."
+  },
+  "inq-0081": {
+    "type": "quality_complaint",
+    "expected_docs": ["qa-safety-escalation", "qa-returns-dtc"],
+    "reason": "2026-11-07 review of a blind-label disagreement: a fuel leak on the sender's first machine, and the only request is a refund or free replacement. Rule 2 makes this quality_complaint. Safety stays true."
+  },
+  "inq-0460": {
+    "type": "unclear_other",
+    "expected_docs": [],
+    "reason": "2026-11-07 review of a blind-label disagreement: the main request is an invoice copy and a statement. The fuel-leak report is one sentence. Rule 1 makes the type unclear_other. Safety stays true, so the case is still urgent and copied to the Quality team."
+  }
+}

@@ -1,0 +1,6933 @@
+{
+ "meta": {
+  "date": "2026-11-07",
+  "mode": "offline",
+  "split": "test",
+  "rows": 279,
+  "runs": 1,
+  "model": "none (keyword router + template drafter)",
+  "limit": null
+ },
+ "summary": {
+  "mean": {
+   "rows": 279,
+   "errors": 0,
+   "type_accuracy": 74.9,
+   "type_macro_f1": 75.8,
+   "segment_accuracy": 90.7,
+   "retrieval_hit_at_3": 70.2,
+   "retrieval_hit_at_3_when_type_correct": 94.0,
+   "retrieval_skip_accuracy": 61.8,
+   "team_accuracy": 73.5,
+   "priority_accuracy": 79.2,
+   "handoff_accuracy": 70.3,
+   "safety_recall": 71.4,
+   "safety_precision": 83.3,
+   "drafts_with_promise_language": 0,
+   "drafts_removed_by_guard": 0,
+   "shipped_drafts_with_violations": 0,
+   "injection_rows_handled": "5/5",
+   "cost_usd_per_inquiry": 0,
+   "tokens_per_inquiry": 0,
+   "seconds_median": 0.0,
+   "seconds_p95": 0.0
+  },
+  "min": {
+   "rows": 279,
+   "errors": 0,
+   "type_accuracy": 74.9,
+   "type_macro_f1": 75.8,
+   "segment_accuracy": 90.7,
+   "retrieval_hit_at_3": 70.2,
+   "retrieval_hit_at_3_when_type_correct": 94.0,
+   "retrieval_skip_accuracy": 61.8,
+   "team_accuracy": 73.5,
+   "priority_accuracy": 79.2,
+   "handoff_accuracy": 70.3,
+   "safety_recall": 71.4,
+   "safety_precision": 83.3,
+   "drafts_with_promise_language": 0,
+   "drafts_removed_by_guard": 0,
+   "shipped_drafts_with_violations": 0,
+   "cost_usd_per_inquiry": 0,
+   "tokens_per_inquiry": 0,
+   "seconds_median": 0.0,
+   "seconds_p95": 0.0
+  }
+ },
+ "runs": [
+  {
+   "rows": 279,
+   "errors": 0,
+   "type_accuracy": 74.9,
+   "type_macro_f1": 75.8,
+   "segment_accuracy": 90.7,
+   "retrieval_hit_at_3": 70.2,
+   "retrieval_hit_at_3_when_type_correct": 94.0,
+   "retrieval_skip_accuracy": 61.8,
+   "team_accuracy": 73.5,
+   "priority_accuracy": 79.2,
+   "handoff_accuracy": 70.3,
+   "safety_recall": 71.4,
+   "safety_precision": 83.3,
+   "drafts_with_promise_language": 0,
+   "drafts_removed_by_guard": 0,
+   "shipped_drafts_with_violations": 0,
+   "injection_rows_handled": "5/5",
+   "cost_usd_per_inquiry": 0,
+   "tokens_per_inquiry": 0,
+   "seconds_median": 0.0,
+   "seconds_p95": 0.0
+  }
+ ],
+ "breakdown": {
+  "segment=b2b": {
+   "n": 139,
+   "type_accuracy": 74.8,
+   "handoff_accuracy": 67.6
+  },
+  "segment=dtc": {
+   "n": 140,
+   "type_accuracy": 75.0,
+   "handoff_accuracy": 72.9
+  },
+  "tag=angry": {
+   "n": 6,
+   "type_accuracy": 66.7,
+   "handoff_accuracy": 50.0
+  },
+  "tag=hidden_safety": {
+   "n": 12,
+   "type_accuracy": 25.0,
+   "handoff_accuracy": 25.0
+  },
+  "tag=injection": {
+   "n": 5,
+   "type_accuracy": 100.0,
+   "handoff_accuracy": 100.0
+  },
+  "tag=long_rambling": {
+   "n": 9,
+   "type_accuracy": 100.0,
+   "handoff_accuracy": 88.9
+  },
+  "tag=mixed_intent": {
+   "n": 9,
+   "type_accuracy": 77.8,
+   "handoff_accuracy": 66.7
+  },
+  "tag=no_model": {
+   "n": 6,
+   "type_accuracy": 66.7,
+   "handoff_accuracy": 66.7
+  },
+  "tag=none": {
+   "n": 190,
+   "type_accuracy": 78.4,
+   "handoff_accuracy": 74.2
+  },
+  "tag=spanish": {
+   "n": 11,
+   "type_accuracy": 27.3,
+   "handoff_accuracy": 27.3
+  },
+  "tag=typos": {
+   "n": 18,
+   "type_accuracy": 88.9,
+   "handoff_accuracy": 83.3
+  },
+  "tag=very_short": {
+   "n": 13,
+   "type_accuracy": 69.2,
+   "handoff_accuracy": 61.5
+  },
+  "type=machine_trouble": {
+   "n": 82,
+   "type_accuracy": 80.5,
+   "handoff_accuracy": 72.0
+  },
+  "type=partner_request": {
+   "n": 55,
+   "type_accuracy": 78.2,
+   "handoff_accuracy": 78.2
+  },
+  "type=quality_complaint": {
+   "n": 75,
+   "type_accuracy": 68.0,
+   "handoff_accuracy": 61.3
+  },
+  "type=unclear_other": {
+   "n": 67,
+   "type_accuracy": 73.1,
+   "handoff_accuracy": 71.6
+  }
+ },
+ "confusion": {
+  "machine_trouble": {
+   "machine_trouble": 66,
+   "quality_complaint": 7,
+   "unclear_other": 9
+  },
+  "quality_complaint": {
+   "machine_trouble": 20,
+   "quality_complaint": 51,
+   "unclear_other": 4
+  },
+  "partner_request": {
+   "partner_request": 43,
+   "unclear_other": 12
+  },
+  "unclear_other": {
+   "machine_trouble": 10,
+   "quality_complaint": 6,
+   "partner_request": 2,
+   "unclear_other": 49
+  }
+ },
+ "failures": [
+  {
+   "id": "inq-0007",
+   "tags": [
+    "spanish"
+   ],
+   "problem": "type machine_trouble -> unclear_other; handoff Service desk/normal -> Front desk/low; docs ['ts-fh210-hydraulic', 'man-fh210'] not in []",
+   "text": "Cortadora de troncos muy lenta | Buenas, tengo una FH-210 en mi peque\u00f1a granja y ya no est\u00e1 rindiendo. El ariete avanza muy despacio y a veces se detiene por co"
+  },
+  {
+   "id": "inq-0008",
+   "tags": [
+    "hidden_safety"
+   ],
+   "problem": "docs ['ts-engine-general'] not in ['man-fhg7', 'ts-fhg7-output', 'ts-fhg7-nostart']",
+   "text": "Question about my generator | Dear Fernhollow team,\n\nI am a first-time owner of a portable generator and I have a few questions. I bought the FH-G7 in September"
+  },
+  {
+   "id": "inq-0011",
+   "tags": [
+    "hidden_safety"
+   ],
+   "problem": "type machine_trouble -> unclear_other; handoff Service desk/urgent -> Front desk/urgent; docs ['man-fh210'] not in []",
+   "text": "FH-210 question | Hi, bit of a long one. My wife and I have the FH-210 at our cabin, it's the one with the horizontal beam, and we finally got around to splitti"
+  },
+  {
+   "id": "inq-0013",
+   "tags": [],
+   "problem": "docs ['war-summary'] not in ['man-fh520', 'ts-fh520-teeth', 'ts-engine-general']",
+   "text": "Warranty question - stump grinder | Good morning. I have owned an FH-520 stump grinder for approximately five months. It has been used according to the manual o"
+  },
+  {
+   "id": "inq-0016",
+   "tags": [
+    "angry"
+   ],
+   "problem": "type machine_trouble -> quality_complaint; handoff Service desk/normal -> Customer care/normal; docs ['ts-fh340-jam'] not in ['qa-returns-dtc', 'qa-safety-escalation', 'war-summary']",
+   "text": "FH-340 jams constantly - refund | This is unacceptable. I have owned the FH-340 chipper for a few months, used only at the cabin on weekends, and it jams every "
+  },
+  {
+   "id": "inq-0020",
+   "tags": [
+    "very_short"
+   ],
+   "problem": "type machine_trouble -> unclear_other; handoff Service desk/urgent -> Front desk/low; docs ['ts-fhp90-pressure'] not in []",
+   "text": "Hose burst | Hey, hose fitting burst on my FH-P90 and got my hand!"
+  },
+  {
+   "id": "inq-0032",
+   "tags": [
+    "spanish"
+   ],
+   "problem": "type machine_trouble -> unclear_other; segment dtc -> b2b; handoff Service desk/normal -> Front desk/low; docs ['ts-fh340-vibration'] not in []",
+   "text": "Astilladora no gira el tambor | Estimados se\u00f1ores de Fernhollow:\n\nLes escribo porque soy nueva con este tipo de equipo. Compr\u00e9 una astilladora FH-340 hace unas "
+  },
+  {
+   "id": "inq-0035",
+   "tags": [
+    "hidden_safety"
+   ],
+   "problem": "type machine_trouble -> quality_complaint; handoff Service desk/urgent -> Customer care/urgent; docs ['ts-fhp90-pressure'] not in ['qa-defect-report', 'qa-safety-escalation', 'war-summary']",
+   "text": "Hose fitting failure on pressure washer | Hello, I'd like to ask about my FH-P90. I've been using it to clean the barn and the equipment shed, which has been a "
+  },
+  {
+   "id": "inq-0054",
+   "tags": [],
+   "problem": "type machine_trouble -> quality_complaint; handoff Service desk/normal -> Customer care/normal; docs ['ts-fh210-hydraulic'] not in ['war-summary', 'qa-safety-escalation', 'qa-returns-dtc']",
+   "text": "Log splitter issue - for my father | Good afternoon. I purchased an FH-210 for my father. The ram will extend but does not return after a split, and the pump ma"
+  },
+  {
+   "id": "inq-0065",
+   "tags": [
+    "long_rambling"
+   ],
+   "problem": "handoff Service desk/normal -> Service desk/urgent",
+   "text": "FH-P90 surging | Hi folks, hope your week is going better than mine. I'll try to be brief but I tend to ramble. We have a little cabin on the lake that we got f"
+  },
+  {
+   "id": "inq-0073",
+   "tags": [
+    "hidden_safety"
+   ],
+   "problem": "type machine_trouble -> unclear_other; handoff Service desk/urgent -> Front desk/urgent; docs ['ts-fhp90-pressure'] not in ['gen-parts-order', 'gen-contact', 'gen-shipping']",
+   "text": "Pressure washer and a question on the hose | To whom it may concern, I'm a retiree with a wooded lot outside town and I bought an FH-P90 earlier this year. Over"
+  },
+  {
+   "id": "inq-0083",
+   "tags": [],
+   "problem": "docs ['war-summary'] not in ['man-fh340', 'ts-fh340-jam', 'ts-fh340-vibration']",
+   "text": "FH-340 stopped working, warranty? | Good afternoon,\n\nI hope you are well. I purchased an FH-340 wood chipper last spring (order FE-104233) and have used it only"
+  },
+  {
+   "id": "inq-0084",
+   "tags": [
+    "long_rambling"
+   ],
+   "problem": "docs ['ts-fhg7-nostart'] not in ['ts-fhg7-output', 'ts-engine-general', 'man-fhg7']",
+   "text": "Generator shutting off | So my dad turned 68 in September and for the last four years he has told every person in our family that he does not need anything for "
+  },
+  {
+   "id": "inq-0090",
+   "tags": [
+    "hidden_safety"
+   ],
+   "problem": "type machine_trouble -> quality_complaint; handoff Service desk/urgent -> Customer care/normal; docs ['ts-fhp90-pressure'] not in ['war-summary', 'qa-safety-escalation', 'qa-returns-dtc']",
+   "text": "Hose fitting failure, FH-P90 | To whom it may concern:\n\nI am writing regarding my FH-P90 pressure washer, which I use around my small hobby farm for cleaning eq"
+  },
+  {
+   "id": "inq-0101",
+   "tags": [
+    "hidden_safety"
+   ],
+   "problem": "type machine_trouble -> unclear_other; handoff Service desk/urgent -> Front desk/urgent; docs ['ts-engine-general'] not in []",
+   "text": "FH-340 first time use | Hey folks! Just got my FH-340 chipper last week and I'm having a ball with it, my first one ever. Noticed a bit of gas dripping near the"
+  },
+  {
+   "id": "inq-0113",
+   "tags": [
+    "hidden_safety"
+   ],
+   "problem": "type machine_trouble -> quality_complaint; handoff Service desk/urgent -> Customer care/urgent; docs ['man-fh210'] not in ['war-summary', 'qa-safety-escalation', 'qa-returns-dtc']",
+   "text": "Log kicked off the wedge | I'm writing because I am honestly fed up. I have a cabin up north and I use my FH-210 maybe four weekends a year, so it's not like I "
+  },
+  {
+   "id": "inq-0118",
+   "tags": [
+    "very_short"
+   ],
+   "problem": "type machine_trouble -> unclear_other; handoff Service desk/normal -> Front desk/low; docs ['ts-fhg7-output'] not in []",
+   "text": "Outlets dead | FH-G7 runs but nothing works in the outlets. Please help."
+  },
+  {
+   "id": "inq-0126",
+   "tags": [],
+   "problem": "handoff Customer care/urgent -> Customer care/normal",
+   "text": "FH-P90 fuel tank seeping | My brand new FH-P90 is seeping gas from the fuel tank. It's wet along the seam and smells strong. I have not even run it yet. I am no"
+  },
+  {
+   "id": "inq-0128",
+   "tags": [],
+   "problem": "docs ['qa-returns-dtc'] not in ['qa-parts-replacement', 'qa-safety-escalation', 'war-summary']",
+   "text": "Corrosion on new FH-520 | Good afternoon. I received my new FH-520 stump grinder last week. There are several spots of flaking paint and surface rust on the fra"
+  },
+  {
+   "id": "inq-0130",
+   "tags": [
+    "mixed_intent"
+   ],
+   "problem": "type quality_complaint -> machine_trouble; handoff Customer care/urgent -> Service desk/normal; docs ['qa-safety-escalation', 'qa-returns-dtc'] not in ['man-fhg7', 'ts-fhg7-nostart', 'ts-engine-general']",
+   "text": "FH-G7 gas seeping from new tank | Just opened my brand new FH-G7 and gas is seeping out of the fuel tank, right along the bottom. I checked the cap and it's tig"
+  },
+  {
+   "id": "inq-0148",
+   "tags": [],
+   "problem": "type quality_complaint -> machine_trouble; handoff Customer care/urgent -> Service desk/urgent; docs ['qa-safety-escalation', 'qa-returns-dtc'] not in ['man-fhg7', 'ts-engine-general', 'ts-fhg7-nostart']",
+   "text": "New generator leaking gas | New FH-G7 is leaking gas from the tank out of the box. Don't want to run it. What now?"
+  },
+  {
+   "id": "inq-0156",
+   "tags": [
+    "angry"
+   ],
+   "problem": "type quality_complaint -> machine_trouble; handoff Customer care/normal -> Service desk/normal; docs ['qa-returns-dtc'] not in ['man-fh340', 'ts-fh340-jam', 'ts-fh340-vibration']",
+   "text": "Refund FH-340 | I bought an FH-340 and it is far too weak for my needs. I want a refund. Do it now."
+  },
+  {
+   "id": "inq-0157",
+   "tags": [],
+   "problem": "type quality_complaint -> machine_trouble; handoff Customer care/normal -> Service desk/normal; docs ['qa-returns-dtc', 'war-summary'] not in ['man-fh520', 'ts-fh520-teeth', 'ts-engine-general']",
+   "text": "Failed component, FH-520 | Dear Customer Service,\n\nI am writing to report that a component on my newly purchased FH-520 stump grinder failed after only two uses"
+  },
+  {
+   "id": "inq-0160",
+   "tags": [],
+   "problem": "type quality_complaint -> machine_trouble; handoff Customer care/normal -> Service desk/normal; docs ['qa-returns-dtc', 'qa-parts-replacement'] not in ['man-fh340', 'war-summary', 'ts-fh340-jam']",
+   "text": "Missing parts, FH-340 | I bought this FH-340 for my father and when he opened it, there was no wheel kit and no handle. I'm really not happy about this. He's 74"
+  },
+  {
+   "id": "inq-0163",
+   "tags": [],
+   "problem": "type quality_complaint -> machine_trouble; handoff Customer care/normal -> Service desk/normal; docs ['qa-returns-dtc'] not in ['man-fh210', 'ts-fh210-hydraulic', 'ts-engine-general']",
+   "text": "Want to send back my FH-210 | I need to return the FH-210. Honestly I should have thought harder before ordering. I bought it because I figured a log splitter w"
+  },
+  {
+   "id": "inq-0165",
+   "tags": [
+    "typos"
+   ],
+   "problem": "type quality_complaint -> unclear_other; handoff Customer care/normal -> Front desk/low; docs ['qa-returns-dtc', 'qa-parts-replacement'] not in []",
+   "text": " | got my fh340 today and theres no wheel kit in the box just the chipper and some bolts. paid for the whole thing. whats going on i cant even move it"
+  },
+  {
+   "id": "inq-0171",
+   "tags": [],
+   "problem": "docs ['qa-returns-dtc'] not in ['qa-parts-replacement', 'war-summary', 'qa-safety-escalation']",
+   "text": "Generator too heavy, thinking of returning | Hi folks, hope you're having a good week. I picked up an FH-G7 last month thinking it would be nice and portable, a"
+  },
+  {
+   "id": "inq-0172",
+   "tags": [
+    "typos"
+   ],
+   "problem": "docs ['qa-returns-dtc'] not in ['qa-safety-escalation', 'war-summary', 'qa-defect-report']",
+   "text": " | hi sorry to bother u i got the fh g7 generator about 10 days ago and theres rust spots coming up on the frame near the handle bar and the red paint is kinda "
+  },
+  {
+   "id": "inq-0177",
+   "tags": [],
+   "problem": "segment dtc -> b2b; handoff Customer care/normal -> Quality team/urgent",
+   "text": "Order FE-104661, FH-210 arrived damaged | Wanted to flag a problem with my order. The FH-210 log splitter was delivered on Monday on a pallet. The box had a big"
+  },
+  {
+   "id": "inq-0178",
+   "tags": [],
+   "problem": "type quality_complaint -> machine_trouble; handoff Customer care/normal -> Service desk/normal; docs ['qa-returns-dtc', 'war-summary'] not in ['man-fh340', 'ts-fh340-jam', 'ts-fh340-vibration']",
+   "text": "Weld failed on FH-340 after two uses | I am a retiree and I own a few wooded acres. I purchased an FH-340 chipper in early October and have used it only twice, "
+  },
+  {
+   "id": "inq-0179",
+   "tags": [],
+   "problem": "type quality_complaint -> machine_trouble; handoff Customer care/urgent -> Service desk/urgent; docs ['qa-safety-escalation', 'qa-returns-dtc'] not in ['man-fhp90', 'ts-fhp90-pressure', 'ts-engine-general']",
+   "text": "FH-P90 leak - bit worried | Hello! We've got a little hobby farm and I ordered the FH-P90 pressure washer to clean the barn and equipment. Great timing since fa"
+  },
+  {
+   "id": "inq-0181",
+   "tags": [],
+   "problem": "type quality_complaint -> machine_trouble; handoff Customer care/urgent -> Service desk/urgent; docs ['qa-safety-escalation', 'qa-returns-dtc'] not in ['ts-fhg7-nostart', 'man-fhg7', 'ts-engine-general']",
+   "text": "Possible fuel leak FH-G7 | Hello, I believe the fuel tank on my new FH-G7 has a small leak at the seam. Could someone please advise? Thank you for your time."
+  },
+  {
+   "id": "inq-0188",
+   "tags": [],
+   "problem": "type quality_complaint -> machine_trouble; handoff Customer care/normal -> Service desk/normal; docs ['qa-returns-dtc', 'war-summary'] not in ['man-fh520', 'ts-fh520-teeth', 'ts-engine-general']",
+   "text": "FH-520 belt snapped on first job | Bought an FH-520 two weeks ago for stump work around the house. Drive belt snapped about twenty minutes into the first stump."
+  },
+  {
+   "id": "inq-0189",
+   "tags": [
+    "hidden_safety"
+   ],
+   "problem": "type quality_complaint -> unclear_other; handoff Customer care/urgent -> Front desk/urgent; docs ['qa-safety-escalation', 'qa-returns-dtc'] not in ['gen-shipping', 'gen-contact', 'gen-parts-order']",
+   "text": "Dad's gift | Ordered the FH-210 for my dad's birthday and he set it up this weekend. He mentioned the engine area looked a bit melted near the electrical connec"
+  },
+  {
+   "id": "inq-0198",
+   "tags": [
+    "no_model"
+   ],
+   "problem": "type unclear_other -> machine_trouble; handoff Front desk/low -> Service desk/normal; docs ['gen-parts-order'] not in ['man-fhg7', 'ts-engine-general', 'ts-fhg7-output']",
+   "text": "Cover and extra parts for my generator | Hello. I'm retired and live on a wooded lot, and I bought your portable generator a while back. It's the red one with t"
+  },
+  {
+   "id": "inq-0207",
+   "tags": [],
+   "problem": "type unclear_other -> quality_complaint; segment dtc -> b2b; handoff Front desk/low -> Quality team/high; retrieved ['qa-returns-dtc', 'qa-parts-replacement', 'war-summary'] but none needed",
+   "text": "Passive income - read this | Dear friend, I have been watching your company for some time. My team of traders has produced a guaranteed 400 percent return on cr"
+  },
+  {
+   "id": "inq-0209",
+   "tags": [
+    "very_short"
+   ],
+   "problem": "type unclear_other -> machine_trouble; handoff Front desk/low -> Service desk/normal; docs ['gen-parts-order'] not in ['man-fh520', 'ts-fh520-teeth', 'war-summary']",
+   "text": "FH-520 teeth | Need cutter teeth for my FH-520, please. Price?"
+  },
+  {
+   "id": "inq-0213",
+   "tags": [],
+   "problem": "segment dtc -> b2b",
+   "text": "Inquiry regarding order FE-104399 | Dear Customer Service, I placed an order on October 19 for a gift for my mother, order FE-104399, and was told by the confir"
+  },
+  {
+   "id": "inq-0214",
+   "tags": [],
+   "problem": "type unclear_other -> machine_trouble; segment dtc -> b2b; handoff Front desk/low -> Service desk/high; retrieved ['man-fh520', 'man-fh340', 'man-fh210'] but none needed",
+   "text": "Applying for yard / warehouse help | Hello, I'm writing to ask if you have any openings in the warehouse or on the sales floor. I'm a homeowner and I've been fi"
+  },
+  {
+   "id": "inq-0215",
+   "tags": [
+    "typos"
+   ],
+   "problem": "type unclear_other -> machine_trouble; handoff Front desk/low -> Service desk/normal; docs ['gen-shipping'] not in ['ts-fh340-jam', 'man-fh340', 'man-fh210']",
+   "text": "shipping q | hi there!! so im lookin at gettin one of yalls machines for my yard i have a bunch of trees down from the storm and been meaning to get after em fo"
+  },
+  {
+   "id": "inq-0218",
+   "tags": [],
+   "problem": "retrieved ['gen-contact', 'gen-parts-order', 'gen-shipping'] but none needed",
+   "text": "Equipment recommendation request | Good morning. I am a first-time buyer of outdoor power equipment. I have about two acres of fallen limbs and dense undergrowt"
+  },
+  {
+   "id": "inq-0220",
+   "tags": [],
+   "problem": "type unclear_other -> quality_complaint; handoff Front desk/low -> Customer care/normal; docs ['gen-parts-order'] not in ['qa-defect-report', 'war-summary', 'qa-safety-escalation']",
+   "text": "Nozzles and a hose for the FH-P90 | Hi there! I've got an FH-P90 and I absolutely love it, it has taken years of grime off my barn doors this season. Nothing is"
+  },
+  {
+   "id": "inq-0224",
+   "tags": [],
+   "problem": "type unclear_other -> machine_trouble; handoff Front desk/low -> Service desk/normal; docs ['gen-parts-order'] not in ['man-fh340', 'ts-fh340-vibration', 'ts-fh340-jam']",
+   "text": "Blade set for the FH-340 I gave my dad | I bought your FH-340 chipper as a gift for my dad last Christmas and he's used it a lot since then. Now he's saying the"
+  },
+  {
+   "id": "inq-0231",
+   "tags": [],
+   "problem": "segment dtc -> b2b; retrieved ['gen-contact', 'gen-shipping', 'gen-parts-order'] but none needed",
+   "text": "Inquiry | Dear Sir or Madam, I am writing to you because I wish to inquire about a matter. I have been meaning to contact your company for some time but have no"
+  },
+  {
+   "id": "inq-0234",
+   "tags": [
+    "spanish"
+   ],
+   "problem": "docs ['gen-parts-order'] not in []",
+   "text": "Cuchillas de repuesto para FH-340 | Buenas tardes. Compr\u00e9 una astilladora FH-340 hace unos meses y quisiera comprar un juego de cuchillas de repuesto para tener"
+  },
+  {
+   "id": "inq-0236",
+   "tags": [
+    "typos"
+   ],
+   "problem": "retrieved ['gen-contact', 'gen-shipping', 'gen-parts-order'] but none needed",
+   "text": " | hi i have an exclusive offer for ur business. we can get u 10000 followers and bitcoin rewards in 24 hours no catch. just reply with ur email and a small pay"
+  },
+  {
+   "id": "inq-0239",
+   "tags": [],
+   "problem": "segment dtc -> b2b",
+   "text": "Tracking not updating - order FE-104102 | Dear Sir or Madam, I am writing about order FE-104102, placed on October 14. The tracking information has shown no cha"
+  },
+  {
+   "id": "inq-0244",
+   "tags": [],
+   "problem": "retrieved ['gen-shipping', 'gen-contact', 'gen-parts-order'] but none needed",
+   "text": "Equipment recommendation for brush clearing | Dear Fernhollow team,\n\nI own a cabin on approximately five acres, which my family uses perhaps four or five weeken"
+  },
+  {
+   "id": "inq-0253",
+   "tags": [],
+   "problem": "type unclear_other -> machine_trouble; handoff Front desk/low -> Service desk/normal; docs ['gen-parts-order'] not in ['man-fh210', 'ts-fh210-hydraulic', 'war-summary']",
+   "text": "Extra blade for FH 210 | Quick one. Bought a log splitter for my mom last month, its the FH 210, order FE-103877. She wants a spare wedge or whatever the splitt"
+  },
+  {
+   "id": "inq-0257",
+   "tags": [],
+   "problem": "type unclear_other -> quality_complaint; handoff Front desk/low -> Customer care/normal; retrieved ['qa-defect-report', 'qa-safety-escalation', 'qa-returns-dtc'] but none needed",
+   "text": "Opportunity for your team | Dear Sir or Madam,\n\nI hope this message finds you well. I am reaching out because I have been part of a private group that has made "
+  },
+  {
+   "id": "inq-0265",
+   "tags": [],
+   "problem": "type unclear_other -> machine_trouble; segment dtc -> b2b; handoff Front desk/low -> Service desk/high; docs ['gen-parts-order'] not in ['man-fh340', 'ts-fh340-jam', 'ts-fh340-vibration']",
+   "text": "Replacement teeth for 340 | I need a set of spare chipper blades for my FH340 and maybe a belt. Got a pile of cedar coming down next week and want them on hand."
+  },
+  {
+   "id": "inq-0278",
+   "tags": [],
+   "problem": "type unclear_other -> machine_trouble; handoff Front desk/low -> Service desk/normal; docs ['gen-parts-order'] not in ['man-fh520', 'war-summary', 'ts-fh520-teeth']",
+   "text": "Stump grinder wear parts | Good day. I own an FH-520 stump grinder, used on my small farm for fence-line clearing. I would like to purchase a spare set of cutti"
+  },
+  {
+   "id": "inq-0289",
+   "tags": [],
+   "problem": "type partner_request -> unclear_other; handoff Partner team/normal -> Front desk/low; docs ['par-apply', 'par-overview'] not in ['gen-parts-order', 'gen-contact', 'gen-shipping']",
+   "text": "Interested in selling Fernhollow equipment | Dear Fernhollow Equipment Supply,\n\nI work the parts counter at Hartwell Farm & Fleet Supply, a family-owned store s"
+  },
+  {
+   "id": "inq-0300",
+   "tags": [],
+   "problem": "type partner_request -> unclear_other; handoff Partner team/normal -> Front desk/low; docs ['par-overview', 'par-apply'] not in ['gen-parts-order', 'gen-shipping', 'gen-contact']",
+   "text": "Resale to smaller shops | Hi folks! Quick intro, we run a small farm-supply store and over the years we've become the go-to for a bunch of smaller operations in"
+  },
+  {
+   "id": "inq-0303",
+   "tags": [
+    "spanish"
+   ],
+   "problem": "type partner_request -> unclear_other; segment b2b -> dtc; handoff Partner team/normal -> Front desk/low; docs ['par-territory'] not in []",
+   "text": "Territorio exclusivo | Escribo desde una tienda de suministros agr\u00edcolas en Texas. Queremos ser distribuidores exclusivos para nuestra zona del valle, pero nadi"
+  },
+  {
+   "id": "inq-0316",
+   "tags": [],
+   "problem": "type partner_request -> unclear_other; handoff Partner team/normal -> Front desk/low; docs ['par-territory', 'par-overview'] not in []",
+   "text": "Distribution in Canada | Good morning. We own a hardware store in British Columbia and would like to ask about distributing Fernhollow products in Canada. Whom "
+  },
+  {
+   "id": "inq-0325",
+   "tags": [],
+   "problem": "type partner_request -> unclear_other; handoff Partner team/normal -> Front desk/low; docs ['par-territory', 'par-overview'] not in []",
+   "text": "Distribution inquiry - Canada | Dear Sir or Madam, we are an equipment dealer in Ontario, Canada, and wish to enquire about distributing the Fernhollow line in "
+  },
+  {
+   "id": "inq-0339",
+   "tags": [],
+   "problem": "type partner_request -> unclear_other; segment b2b -> dtc; handoff Partner team/normal -> Front desk/low; docs ['par-territory', 'par-overview'] not in []",
+   "text": "Distribuidor en Canada | Hi, I own a farm-supply store in Saskatchewan. Want to distribute Fernhollow up here. Can you tell me how, quick as possible? Thanks. D"
+  },
+  {
+   "id": "inq-0348",
+   "tags": [
+    "spanish"
+   ],
+   "problem": "type partner_request -> unclear_other; handoff Partner team/normal -> Front desk/low; docs ['par-tiers'] not in []",
+   "text": "Lista de precios para distribuidores | Hola equipo, un saludo desde Texas. Soy el gerente de flota de una empresa de alquiler de equipos aqu\u00ed en el valle del R\u00ed"
+  },
+  {
+   "id": "inq-0360",
+   "tags": [
+    "spanish"
+   ],
+   "problem": "type partner_request -> unclear_other; handoff Partner team/normal -> Front desk/low; docs ['par-territory'] not in []",
+   "text": "Territorio exclusivo | Buenas tardes. Tengo una tienda de suministros agr\u00edcolas y quiero ser distribuidor regional. \u00bfOfrecen territorio exclusivo? Gracias. Erne"
+  },
+  {
+   "id": "inq-0363",
+   "tags": [
+    "very_short"
+   ],
+   "problem": "type partner_request -> unclear_other; handoff Partner team/normal -> Front desk/low; docs ['par-overview', 'par-tiers'] not in []",
+   "text": "Rental fleet? | Do you have a rental fleet deal? Nobody replied last time."
+  },
+  {
+   "id": "inq-0369",
+   "tags": [],
+   "problem": "type partner_request -> unclear_other; handoff Partner team/normal -> Front desk/low; docs ['par-apply'] not in ['gen-parts-order', 'gen-shipping', 'gen-contact']",
+   "text": "app status | where is our dealer app, sent 4 wks ago. need to order for spring. Mia, fleet, Delta Rental"
+  },
+  {
+   "id": "inq-0371",
+   "tags": [],
+   "problem": "type partner_request -> unclear_other; handoff Partner team/normal -> Front desk/low; docs ['par-apply', 'par-overview'] not in []",
+   "text": "Interest in becoming a Fernhollow dealer | Good morning. I own a hardware store in a mid-sized town in Iowa, and my customers have been asking about your outdoo"
+  },
+  {
+   "id": "inq-0382",
+   "tags": [],
+   "problem": "type partner_request -> unclear_other; handoff Partner team/normal -> Front desk/low; docs ['par-territory', 'par-overview'] not in []",
+   "text": "distribute in Canada | Owner of a hardware store in Nova Scotia. We want to distribute your line in Canada, and so far nobody can tell me how. What is the proce"
+  },
+  {
+   "id": "inq-0393",
+   "tags": [
+    "very_short"
+   ],
+   "problem": "segment b2b -> dtc; handoff Quality team/high -> Customer care/normal; docs ['qa-defect-report', 'war-summary'] not in ['qa-returns-dtc', 'qa-parts-replacement', 'qa-safety-escalation']",
+   "text": "FH520 returns | Customers keep returning FH520 grinders. Same bearing failure each time."
+  },
+  {
+   "id": "inq-0402",
+   "tags": [
+    "hidden_safety"
+   ],
+   "problem": "type quality_complaint -> unclear_other; handoff Quality team/urgent -> Front desk/low; docs ['qa-safety-escalation', 'qa-defect-report'] not in ['gen-contact', 'gen-parts-order', 'gen-shipping']",
+   "text": "Follow-up on our recent FH-P90 order | Good afternoon,\n\nI manage the service department at Calloway Equipment & Rental and I am writing about the open order for"
+  },
+  {
+   "id": "inq-0405",
+   "tags": [
+    "angry"
+   ],
+   "problem": "segment b2b -> dtc; handoff Quality team/high -> Customer care/normal",
+   "text": "UNACCEPTABLE - broken parts again | Well hello. Owner of Hartsell Hardware here, and I am not in a good mood. The replacement drive parts you sent for my FH-520"
+  },
+  {
+   "id": "inq-0407",
+   "tags": [],
+   "problem": "type quality_complaint -> machine_trouble; handoff Quality team/high -> Service desk/high; docs ['qa-defect-report', 'war-summary'] not in ['man-fh340', 'ts-engine-general', 'ts-fh340-jam']",
+   "text": "chipper returns, need answer | need help asap. we are a dealer and keep getting FH-340 chippers back from customers, same thing every time, the drive belt shred"
+  },
+  {
+   "id": "inq-0412",
+   "tags": [],
+   "problem": "type quality_complaint -> machine_trouble; handoff Quality team/high -> Service desk/high; docs ['qa-defect-report'] not in ['ts-fh340-vibration', 'man-fh340', 'ts-engine-general']",
+   "text": "Wedge trouble on the 340s! | Hey Fernhollow crew! Ned here from Ned's Hardware & Garden, been selling your stuff for a few years now and generally love it. But "
+  },
+  {
+   "id": "inq-0415",
+   "tags": [],
+   "problem": "type quality_complaint -> machine_trouble; segment b2b -> dtc; handoff Quality team/high -> Service desk/normal; docs ['qa-parts-replacement'] not in ['man-fh520', 'ts-fh520-teeth', 'war-summary']",
+   "text": "Wrong grinder parts AGAIN | This is the second time. We ordered cutter wheel teeth and a pivot kit for the FH-520 and what showed up was a set of belts that don"
+  },
+  {
+   "id": "inq-0417",
+   "tags": [],
+   "problem": "type quality_complaint -> machine_trouble; handoff Quality team/high -> Service desk/high; docs ['qa-defect-report'] not in ['man-fhp90', 'ts-fhp90-pressure', 'war-summary']",
+   "text": "P90 dead stock | Got 6 FH-P90 in the yard that fail on startup, pump won't build pressure. Want them off my books. Credit or pickup? Tell me what you need from "
+  },
+  {
+   "id": "inq-0425",
+   "tags": [],
+   "problem": "type quality_complaint -> machine_trouble; segment b2b -> dtc; handoff Quality team/urgent -> Service desk/urgent; docs ['qa-safety-escalation', 'qa-defect-report'] not in ['ts-fh210-hydraulic', 'man-fh210', 'ts-engine-general']",
+   "text": "Heads up about some FH-210s | Hey there, hope your week is going well! Quick one. We've been sending splitters out to a few of the smaller shops around here, an"
+  },
+  {
+   "id": "inq-0426",
+   "tags": [],
+   "problem": "type quality_complaint -> machine_trouble; handoff Quality team/urgent -> Service desk/urgent; docs ['qa-safety-escalation', 'qa-defect-report'] not in ['man-fhg7', 'ts-fhg7-nostart', 'ts-fhg7-output']",
+   "text": "Fuel leak reports - FH-G7 | Dear Sir or Madam: Two customers report fuel leaking from the FH-G7 near the tank seam. Please advise how to proceed. Regards, Alber"
+  },
+  {
+   "id": "inq-0428",
+   "tags": [],
+   "problem": "docs ['qa-defect-report'] not in ['qa-parts-replacement', 'qa-returns-dtc', 'war-summary']",
+   "text": "Request for credit or return authorization - FH-520 | Dear Accounts Team,\n\nWe are Redwater Equipment Rentals and we currently hold four FH-520 stump grinders in"
+  },
+  {
+   "id": "inq-0435",
+   "tags": [],
+   "problem": "type quality_complaint -> machine_trouble; handoff Quality team/urgent -> Service desk/high; docs ['qa-safety-escalation', 'qa-defect-report'] not in ['ts-fhp90-pressure', 'man-fhp90', 'ts-engine-general']",
+   "text": "Hose bursts on P90 - this is getting serious | I'm the guy at the parts counter at Mason Lake Equipment, and I'm tired of calling about this. We have now had th"
+  },
+  {
+   "id": "inq-0439",
+   "tags": [
+    "no_model"
+   ],
+   "problem": "type quality_complaint -> machine_trouble; handoff Quality team/high -> Service desk/high; docs ['qa-freight-damage'] not in ['ts-engine-general', 'war-summary', 'ts-fh210-hydraulic']",
+   "text": "Wrong machines delivered | Good afternoon. Our order was for four wood chippers. The delivery included only three chippers and a log splitter that we did not or"
+  },
+  {
+   "id": "inq-0443",
+   "tags": [
+    "no_model"
+   ],
+   "problem": "docs ['qa-defect-report'] not in ['qa-returns-dtc', 'qa-parts-replacement', 'qa-freight-damage']",
+   "text": "Request for return of defective splitters | Good day. We hold several defective log splitters in stock and wish to return them for credit. Please provide return"
+  },
+  {
+   "id": "inq-0447",
+   "tags": [],
+   "problem": "type quality_complaint -> unclear_other; segment b2b -> dtc; handoff Quality team/high -> Front desk/low; docs ['qa-freight-damage'] not in ['gen-contact', 'gen-shipping', 'gen-parts-order']",
+   "text": "short on P90 | only 2 of 5 FH-P90 showed up. rest coming? order FE-129034. -Kevin, Service Dept, Ironwood Equipment"
+  },
+  {
+   "id": "inq-0464",
+   "tags": [],
+   "problem": "type quality_complaint -> machine_trouble; handoff Quality team/high -> Service desk/high; docs ['qa-defect-report', 'war-summary'] not in ['man-fh520', 'ts-fh520-teeth', 'ts-engine-general']",
+   "text": "Repeated failures on the 520 - need answers | I'm the service manager at Dunmore Mower & Saw and I've had enough of this. That's now seven FH-520 stump grinders"
+  },
+  {
+   "id": "inq-0467",
+   "tags": [
+    "typos"
+   ],
+   "problem": "segment b2b -> dtc; handoff Quality team/high -> Customer care/normal",
+   "text": "cracked welds 520s | dear sir we got a shipmnt of fh-520 stump grinders last wk and 4 of the 6 have crackd welds on the cutter arm also wrong bolts in the hardw"
+  },
+  {
+   "id": "inq-0469",
+   "tags": [],
+   "problem": "type quality_complaint -> machine_trouble; handoff Quality team/high -> Service desk/high",
+   "text": "P90 returns piling up | Need info fast. Counter's been slammed with FH-P90 returns, 6 so far this month, all same thing, pump seal weeps then the pump quits pre"
+  },
+  {
+   "id": "inq-0473",
+   "tags": [],
+   "problem": "segment b2b -> dtc; handoff Service desk/high -> Service desk/normal",
+   "text": "Washer won't start | The FH-P90 we kept in the back room all winter now won't start at all. Pull cord feels normal, nothing catches. I have a customer waiting o"
+  },
+  {
+   "id": "inq-0479",
+   "tags": [],
+   "problem": "segment b2b -> dtc; handoff Service desk/high -> Service desk/normal",
+   "text": "Maintenance question for the 210 | Hey there! Counter guy over at Hobart Street Power Equipment. A customer picked up an FH-210 from us last week and asked me a"
+  },
+  {
+   "id": "inq-0483",
+   "tags": [],
+   "problem": "handoff Service desk/high -> Service desk/urgent",
+   "text": "generator trouble | Hey there, hope the week's going well. One of our FH-G7 rental units wouldn't fire up this morning, and the pull cord was crazy stiff, almos"
+  },
+  {
+   "id": "inq-0485",
+   "tags": [
+    "spanish"
+   ],
+   "problem": "type machine_trouble -> unclear_other; segment b2b -> dtc; handoff Service desk/high -> Front desk/low; docs ['ts-fh340-jam'] not in []",
+   "text": "Chipper FH-340 se atasca | Buenas tardes. Le escribo de parte de nuestra empresa de jardiner\u00eda. Nuestra astilladora FH-340 se atasca con frecuencia cuando tritu"
+  },
+  {
+   "id": "inq-0486",
+   "tags": [
+    "spanish"
+   ],
+   "problem": "type machine_trouble -> unclear_other; handoff Service desk/high -> Front desk/low; docs ['ts-fhp90-pressure'] not in []",
+   "text": "Consulta sobre FH-P90 | Estimados se\u00f1ores: Nuestra hidrolavadora FH-P90 presenta baja presi\u00f3n y el chorro pulsa de manera irregular durante el trabajo. Solicita"
+  },
+  {
+   "id": "inq-0493",
+   "tags": [],
+   "problem": "segment b2b -> dtc; handoff Service desk/high -> Service desk/normal",
+   "text": "FH-G7 no power at outlets | The FH-G7 we sold last month runs fine, but nothing works when plugged into the outlets and sometimes the breaker trips. The custome"
+  },
+  {
+   "id": "inq-0496",
+   "tags": [
+    "spanish"
+   ],
+   "problem": "type machine_trouble -> quality_complaint; handoff Service desk/urgent -> Quality team/high; docs ['ts-fhp90-pressure'] not in ['qa-safety-escalation', 'war-summary']",
+   "text": "Manguera de alta presi\u00f3n revent\u00f3 - FH-P90 | Necesito reportar un accidente. Durante el uso de una FH-P90 en nuestro taller, un racor de la manguera de alta pres"
+  },
+  {
+   "id": "inq-0499",
+   "tags": [],
+   "problem": "segment b2b -> dtc; handoff Service desk/high -> Service desk/normal",
+   "text": "G7 not starting, pull cord stuck? | Hi folks! Parts counter here at Brewer's. A customer brought in his generator today, an FH-G7, and swears it was running fin"
+  },
+  {
+   "id": "inq-0505",
+   "tags": [
+    "mixed_intent"
+   ],
+   "problem": "segment b2b -> dtc; handoff Service desk/high -> Service desk/normal",
+   "text": "G7 dies after a few minutes | One of the FH-G7 generators we sold to a contractor starts fine but cuts out after a few minutes of running. He says it happens wi"
+  },
+  {
+   "id": "inq-0508",
+   "tags": [
+    "hidden_safety"
+   ],
+   "problem": "type machine_trouble -> quality_complaint; handoff Service desk/urgent -> Quality team/high; docs ['ts-fhp90-pressure'] not in ['qa-safety-escalation', 'qa-defect-report', 'qa-returns-dtc']",
+   "text": "Question about invoice FE-102915 and a P90 | Hello, I am in accounts payable at a dealer and I'm writing about invoice FE-102915, which looks like it has a dupl"
+  },
+  {
+   "id": "inq-0513",
+   "tags": [
+    "hidden_safety"
+   ],
+   "problem": "segment b2b -> dtc",
+   "text": "Quick question on a generator | Hi, we've had a few questions on the FH-G7 lately, mostly about fuel storage and run times. One customer also mentioned a burnin"
+  },
+  {
+   "id": "inq-0517",
+   "tags": [],
+   "problem": "retrieved ['gen-contact', 'gen-parts-order', 'gen-shipping'] but none needed",
+   "text": "Interview request - rental industry newsletter | Hi, I'm the fleet manager at a rental company and I also write a short column for our regional rental associati"
+  },
+  {
+   "id": "inq-0519",
+   "tags": [],
+   "problem": "handoff Front desk/low -> Front desk/urgent",
+   "text": "Nozzles for P90 | Need 4 spare nozzle sets for the FH-P90 plus a couple of extra wands if you have them. We keep burning through nozzles on dealer rentals. Noth"
+  },
+  {
+   "id": "inq-0529",
+   "tags": [],
+   "problem": "segment b2b -> dtc",
+   "text": "Second request for an interview | This is my second message. I write for a small local paper and I'm doing a story on equipment prices for rural businesses. I'v"
+  },
+  {
+   "id": "inq-0530",
+   "tags": [],
+   "problem": "type unclear_other -> quality_complaint; handoff Front desk/low -> Quality team/high; retrieved ['war-summary', 'qa-freight-damage', 'qa-defect-report'] but none needed",
+   "text": "Business Opportunity | Dear Sir or Madam,\n\nWe are pleased to inform you that your hardware store has been selected to participate in a limited digital currency "
+  },
+  {
+   "id": "inq-0535",
+   "tags": [],
+   "problem": "type unclear_other -> partner_request; handoff Front desk/low -> Partner team/normal; retrieved ['par-territory', 'par-overview', 'par-apply'] but none needed",
+   "text": "Congratulations!! | Hi there!! Wanted to tell you about a super special thing, my cousin made a lot of money with a new coin and I'm helping spread the word to "
+  },
+  {
+   "id": "inq-0537",
+   "tags": [],
+   "problem": "type unclear_other -> quality_complaint; handoff Front desk/low -> Quality team/high; retrieved ['qa-defect-report', 'qa-returns-dtc', 'war-summary'] but none needed",
+   "text": "Student project / interview request | Good morning, I manage operations at a landscaping company and I also teach an evening class at our community college on s"
+  },
+  {
+   "id": "inq-0538",
+   "tags": [
+    "mixed_intent"
+   ],
+   "problem": "type unclear_other -> machine_trouble; handoff Front desk/low -> Service desk/high; docs ['gen-parts-order'] not in ['man-fh340', 'ts-fh340-vibration', 'ts-fh340-jam']",
+   "text": "340 parts + previous email | Need a set of spare chipper blades and a drive belt for the FH-340, no problems with the machine, just stocking. What's the part nu"
+  },
+  {
+   "id": "inq-0539",
+   "tags": [
+    "mixed_intent"
+   ],
+   "problem": "segment b2b -> dtc",
+   "text": "Marketing services | We offer search engine optimization for local hardware stores. Can I send you a quote? Also, I emailed you last week and no one replied. - "
+  },
+  {
+   "id": "inq-0541",
+   "tags": [],
+   "problem": "type unclear_other -> quality_complaint; handoff Front desk/low -> Quality team/high; docs ['gen-parts-order'] not in ['qa-safety-escalation', 'war-summary', 'qa-parts-replacement']",
+   "text": "P90 wand and nozzle order | Hi! Farm store here and we're getting ready for the spring rush. Can I get a quote on replacement nozzles and a few extra high-press"
+  },
+  {
+   "id": "inq-0547",
+   "tags": [],
+   "problem": "type unclear_other -> machine_trouble; handoff Front desk/low -> Service desk/high; docs ['gen-parts-order'] not in ['ts-fh520-teeth', 'ts-engine-general', 'war-summary']",
+   "text": "Need teeth for 520, third time asking | Third time I'm sending this. I need replacement cutting teeth and a couple of belts for the FH-520. Nothing is wrong wit"
+  },
+  {
+   "id": "inq-0551",
+   "tags": [],
+   "problem": "type unclear_other -> partner_request; handoff Front desk/low -> Partner team/normal; retrieved ['par-territory', 'par-apply', 'par-overview'] but none needed",
+   "text": "Stop sending me this stuff | I keep getting messages from your site address about winning prizes and some crypto thing. I'm a buyer at a distributor and I did n"
+  },
+  {
+   "id": "inq-0557",
+   "tags": [],
+   "problem": "retrieved ['gen-shipping', 'gen-contact', 'gen-parts-order'] but none needed",
+   "text": "payment not showing | ok so our account lady says we paid invoice FE-104290 on the 9th and your system still shows it unpaid and shes mad she also needs the rig"
+  },
+  {
+   "id": "inq-0559",
+   "tags": [],
+   "problem": "segment b2b -> dtc",
+   "text": "When are you open? | Hi there, hope everyone's doing well! I'm the ops manager for a landscaping outfit and I keep meaning to call you about a couple of things,"
+  }
+ ],
+ "predictions_run1": [
+  {
+   "id": "inq-0007",
+   "type": "unclear_other",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 0.3,
+   "retrieved": [],
+   "team": "Front desk",
+   "cc": [],
+   "priority": "low",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.006
+  },
+  {
+   "id": "inq-0008",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": true,
+   "confidence": 1.0,
+   "retrieved": [
+    "man-fhg7",
+    "ts-fhg7-output",
+    "ts-fhg7-nostart"
+   ],
+   "team": "Service desk",
+   "cc": [
+    "Quality team"
+   ],
+   "priority": "urgent",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0009",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 0.8,
+   "retrieved": [
+    "ts-fh520-teeth",
+    "man-fh520",
+    "ts-engine-general"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0011",
+   "type": "unclear_other",
+   "segment": "dtc",
+   "safety": true,
+   "confidence": 0.3,
+   "retrieved": [],
+   "team": "Front desk",
+   "cc": [
+    "Quality team"
+   ],
+   "priority": "urgent",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0013",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "man-fh520",
+    "ts-fh520-teeth",
+    "ts-engine-general"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0014",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 0.88,
+   "retrieved": [
+    "ts-fhp90-pressure",
+    "man-fhp90",
+    "war-summary"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0016",
+   "type": "quality_complaint",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 0.8,
+   "retrieved": [
+    "qa-returns-dtc",
+    "qa-safety-escalation",
+    "war-summary"
+   ],
+   "team": "Customer care",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0018",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 0.85,
+   "retrieved": [
+    "man-fh210",
+    "ts-fh210-hydraulic",
+    "ts-engine-general"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0019",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "ts-fhg7-nostart",
+    "ts-fhg7-output",
+    "man-fhg7"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0020",
+   "type": "unclear_other",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 0.3,
+   "retrieved": [],
+   "team": "Front desk",
+   "cc": [],
+   "priority": "low",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0023",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 0.88,
+   "retrieved": [
+    "man-fh520",
+    "ts-fh520-teeth",
+    "ts-engine-general"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0025",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 0.85,
+   "retrieved": [
+    "ts-fh340-jam",
+    "man-fh340",
+    "ts-engine-general"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0028",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "ts-fh210-hydraulic",
+    "man-fh210",
+    "ts-engine-general"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0029",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 0.8,
+   "retrieved": [
+    "ts-fh210-hydraulic",
+    "man-fh210",
+    "war-summary"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0030",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "ts-fhp90-pressure",
+    "man-fhp90",
+    "war-summary"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0031",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "ts-fh210-hydraulic",
+    "man-fh210",
+    "war-summary"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0032",
+   "type": "unclear_other",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 0.3,
+   "retrieved": [],
+   "team": "Front desk",
+   "cc": [],
+   "priority": "low",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0035",
+   "type": "quality_complaint",
+   "segment": "dtc",
+   "safety": true,
+   "confidence": 1.0,
+   "retrieved": [
+    "qa-defect-report",
+    "qa-safety-escalation",
+    "war-summary"
+   ],
+   "team": "Customer care",
+   "cc": [
+    "Quality team"
+   ],
+   "priority": "urgent",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.003
+  },
+  {
+   "id": "inq-0037",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "man-fh520",
+    "ts-fh520-teeth",
+    "war-summary"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0041",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "ts-fh340-jam",
+    "man-fh340",
+    "ts-fh340-vibration"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0043",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "ts-fh520-teeth",
+    "man-fh520",
+    "war-summary"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0045",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "ts-fh340-vibration",
+    "man-fh340",
+    "ts-fh340-jam"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0050",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 0.8,
+   "retrieved": [
+    "man-fhp90",
+    "ts-fhp90-pressure",
+    "ts-engine-general"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0054",
+   "type": "quality_complaint",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "war-summary",
+    "qa-safety-escalation",
+    "qa-returns-dtc"
+   ],
+   "team": "Customer care",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0057",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "ts-fh210-hydraulic",
+    "man-fh210",
+    "ts-engine-general"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0058",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": true,
+   "confidence": 1.0,
+   "retrieved": [
+    "ts-fhg7-output",
+    "ts-fhg7-nostart",
+    "man-fhg7"
+   ],
+   "team": "Service desk",
+   "cc": [
+    "Quality team"
+   ],
+   "priority": "urgent",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0060",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": true,
+   "confidence": 1.0,
+   "retrieved": [
+    "ts-engine-general",
+    "man-fh340",
+    "ts-fh340-jam"
+   ],
+   "team": "Service desk",
+   "cc": [
+    "Quality team"
+   ],
+   "priority": "urgent",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.003
+  },
+  {
+   "id": "inq-0061",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 0.85,
+   "retrieved": [
+    "man-fh210",
+    "ts-fh210-hydraulic",
+    "ts-engine-general"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0062",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "man-fhg7",
+    "ts-fhg7-output",
+    "ts-fhg7-nostart"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0065",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": true,
+   "confidence": 0.85,
+   "retrieved": [
+    "man-fhp90",
+    "war-summary",
+    "ts-fhp90-pressure"
+   ],
+   "team": "Service desk",
+   "cc": [
+    "Quality team"
+   ],
+   "priority": "urgent",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0066",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": true,
+   "confidence": 1.0,
+   "retrieved": [
+    "man-fh210",
+    "ts-engine-general",
+    "ts-fh210-hydraulic"
+   ],
+   "team": "Service desk",
+   "cc": [
+    "Quality team"
+   ],
+   "priority": "urgent",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.003
+  },
+  {
+   "id": "inq-0068",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 0.8,
+   "retrieved": [
+    "ts-fhg7-output",
+    "man-fhg7",
+    "ts-engine-general"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0070",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "ts-fhp90-pressure",
+    "man-fhp90",
+    "war-summary"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0071",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "ts-fhg7-nostart",
+    "man-fhg7",
+    "ts-engine-general"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0073",
+   "type": "unclear_other",
+   "segment": "dtc",
+   "safety": true,
+   "confidence": 1.0,
+   "retrieved": [
+    "gen-parts-order",
+    "gen-contact",
+    "gen-shipping"
+   ],
+   "team": "Front desk",
+   "cc": [
+    "Quality team"
+   ],
+   "priority": "urgent",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0074",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "ts-fh210-hydraulic",
+    "man-fh210",
+    "war-summary"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0076",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 0.8,
+   "retrieved": [
+    "ts-fh520-teeth",
+    "man-fh520",
+    "war-summary"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0078",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "man-fh210",
+    "ts-fh210-hydraulic",
+    "war-summary"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0079",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "ts-fh340-jam",
+    "man-fh340",
+    "ts-fh340-vibration"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0083",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "man-fh340",
+    "ts-fh340-jam",
+    "ts-fh340-vibration"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0084",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "ts-fhg7-output",
+    "ts-engine-general",
+    "man-fhg7"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0088",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "ts-fh210-hydraulic",
+    "man-fh210",
+    "war-summary"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0090",
+   "type": "quality_complaint",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "war-summary",
+    "qa-safety-escalation",
+    "qa-returns-dtc"
+   ],
+   "team": "Customer care",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0091",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "man-fh210",
+    "ts-fh210-hydraulic",
+    "war-summary"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0092",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 0.8,
+   "retrieved": [
+    "ts-fh340-jam",
+    "man-fh340",
+    "ts-fh340-vibration"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [
+    "possible_prompt_injection"
+   ],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0094",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "ts-fhp90-pressure",
+    "man-fhp90",
+    "ts-engine-general"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0095",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "ts-fhg7-nostart",
+    "ts-fhg7-output",
+    "man-fhg7"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0098",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 0.85,
+   "retrieved": [
+    "ts-fh340-vibration",
+    "man-fh340",
+    "ts-engine-general"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0099",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "ts-fh520-teeth",
+    "man-fh520",
+    "war-summary"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0100",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "ts-fh340-vibration",
+    "ts-fh340-jam",
+    "man-fh340"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0101",
+   "type": "unclear_other",
+   "segment": "dtc",
+   "safety": true,
+   "confidence": 0.3,
+   "retrieved": [],
+   "team": "Front desk",
+   "cc": [
+    "Quality team"
+   ],
+   "priority": "urgent",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0102",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 0.8,
+   "retrieved": [
+    "ts-fhp90-pressure",
+    "man-fhp90",
+    "war-summary"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0103",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "ts-fh340-vibration",
+    "man-fh340",
+    "ts-fh340-jam"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0107",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "ts-fh340-jam",
+    "man-fh340",
+    "ts-fh340-vibration"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0109",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": true,
+   "confidence": 0.7,
+   "retrieved": [
+    "ts-fhg7-output",
+    "ts-fhg7-nostart",
+    "man-fhg7"
+   ],
+   "team": "Service desk",
+   "cc": [
+    "Quality team"
+   ],
+   "priority": "urgent",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0110",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "man-fh210",
+    "ts-fh210-hydraulic",
+    "war-summary"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0113",
+   "type": "quality_complaint",
+   "segment": "dtc",
+   "safety": true,
+   "confidence": 0.7,
+   "retrieved": [
+    "war-summary",
+    "qa-safety-escalation",
+    "qa-returns-dtc"
+   ],
+   "team": "Customer care",
+   "cc": [
+    "Quality team"
+   ],
+   "priority": "urgent",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0114",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "man-fhp90",
+    "ts-fhp90-pressure",
+    "war-summary"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0116",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "ts-fhg7-nostart",
+    "man-fhg7",
+    "ts-fhg7-output"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0118",
+   "type": "unclear_other",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 0.3,
+   "retrieved": [],
+   "team": "Front desk",
+   "cc": [],
+   "priority": "low",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0124",
+   "type": "quality_complaint",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 0.8,
+   "retrieved": [
+    "qa-parts-replacement",
+    "war-summary",
+    "qa-returns-dtc"
+   ],
+   "team": "Customer care",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [
+    "possible_prompt_injection"
+   ],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0125",
+   "type": "quality_complaint",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "qa-returns-dtc",
+    "qa-safety-escalation",
+    "qa-defect-report"
+   ],
+   "team": "Customer care",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0126",
+   "type": "quality_complaint",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "war-summary",
+    "qa-safety-escalation",
+    "qa-defect-report"
+   ],
+   "team": "Customer care",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0128",
+   "type": "quality_complaint",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "qa-parts-replacement",
+    "qa-safety-escalation",
+    "war-summary"
+   ],
+   "team": "Customer care",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0129",
+   "type": "quality_complaint",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "qa-parts-replacement",
+    "qa-safety-escalation",
+    "qa-returns-dtc"
+   ],
+   "team": "Customer care",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0130",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 0.76,
+   "retrieved": [
+    "man-fhg7",
+    "ts-fhg7-nostart",
+    "ts-engine-general"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0134",
+   "type": "quality_complaint",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "qa-freight-damage",
+    "qa-returns-dtc",
+    "qa-safety-escalation"
+   ],
+   "team": "Customer care",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0135",
+   "type": "quality_complaint",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "qa-returns-dtc",
+    "qa-parts-replacement",
+    "qa-safety-escalation"
+   ],
+   "team": "Customer care",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0138",
+   "type": "quality_complaint",
+   "segment": "dtc",
+   "safety": true,
+   "confidence": 0.8,
+   "retrieved": [
+    "qa-returns-dtc",
+    "qa-safety-escalation",
+    "qa-freight-damage"
+   ],
+   "team": "Customer care",
+   "cc": [
+    "Quality team"
+   ],
+   "priority": "urgent",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0141",
+   "type": "quality_complaint",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 0.8,
+   "retrieved": [
+    "qa-safety-escalation",
+    "qa-defect-report",
+    "qa-returns-dtc"
+   ],
+   "team": "Customer care",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0142",
+   "type": "quality_complaint",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "qa-returns-dtc",
+    "qa-safety-escalation",
+    "war-summary"
+   ],
+   "team": "Customer care",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0145",
+   "type": "quality_complaint",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "qa-returns-dtc",
+    "war-summary",
+    "qa-parts-replacement"
+   ],
+   "team": "Customer care",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0148",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": true,
+   "confidence": 0.7,
+   "retrieved": [
+    "man-fhg7",
+    "ts-engine-general",
+    "ts-fhg7-nostart"
+   ],
+   "team": "Service desk",
+   "cc": [
+    "Quality team"
+   ],
+   "priority": "urgent",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0150",
+   "type": "quality_complaint",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "qa-returns-dtc",
+    "qa-parts-replacement",
+    "qa-defect-report"
+   ],
+   "team": "Customer care",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0151",
+   "type": "quality_complaint",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "qa-returns-dtc",
+    "qa-safety-escalation",
+    "qa-freight-damage"
+   ],
+   "team": "Customer care",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0154",
+   "type": "quality_complaint",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 0.85,
+   "retrieved": [
+    "qa-parts-replacement",
+    "qa-returns-dtc",
+    "qa-freight-damage"
+   ],
+   "team": "Customer care",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [
+    "possible_prompt_injection"
+   ],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0156",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 0.7,
+   "retrieved": [
+    "man-fh340",
+    "ts-fh340-jam",
+    "ts-fh340-vibration"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0157",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 0.7,
+   "retrieved": [
+    "man-fh520",
+    "ts-fh520-teeth",
+    "ts-engine-general"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0160",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 0.7,
+   "retrieved": [
+    "man-fh340",
+    "war-summary",
+    "ts-fh340-jam"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0163",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 0.6,
+   "retrieved": [
+    "man-fh210",
+    "ts-fh210-hydraulic",
+    "ts-engine-general"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0165",
+   "type": "unclear_other",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 0.3,
+   "retrieved": [],
+   "team": "Front desk",
+   "cc": [],
+   "priority": "low",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0170",
+   "type": "quality_complaint",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "qa-freight-damage",
+    "qa-parts-replacement",
+    "qa-returns-dtc"
+   ],
+   "team": "Customer care",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0171",
+   "type": "quality_complaint",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "qa-parts-replacement",
+    "war-summary",
+    "qa-safety-escalation"
+   ],
+   "team": "Customer care",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0172",
+   "type": "quality_complaint",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "qa-safety-escalation",
+    "war-summary",
+    "qa-defect-report"
+   ],
+   "team": "Customer care",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0177",
+   "type": "quality_complaint",
+   "segment": "b2b",
+   "safety": true,
+   "confidence": 0.83,
+   "retrieved": [
+    "qa-returns-dtc",
+    "qa-freight-damage",
+    "qa-safety-escalation"
+   ],
+   "team": "Quality team",
+   "cc": [],
+   "priority": "urgent",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0178",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 0.7,
+   "retrieved": [
+    "man-fh340",
+    "ts-fh340-jam",
+    "ts-fh340-vibration"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0179",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": true,
+   "confidence": 0.7,
+   "retrieved": [
+    "man-fhp90",
+    "ts-fhp90-pressure",
+    "ts-engine-general"
+   ],
+   "team": "Service desk",
+   "cc": [
+    "Quality team"
+   ],
+   "priority": "urgent",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0180",
+   "type": "quality_complaint",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "qa-safety-escalation",
+    "war-summary",
+    "qa-parts-replacement"
+   ],
+   "team": "Customer care",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0181",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": true,
+   "confidence": 1.0,
+   "retrieved": [
+    "ts-fhg7-nostart",
+    "man-fhg7",
+    "ts-engine-general"
+   ],
+   "team": "Service desk",
+   "cc": [
+    "Quality team"
+   ],
+   "priority": "urgent",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0182",
+   "type": "quality_complaint",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "qa-parts-replacement",
+    "qa-safety-escalation",
+    "war-summary"
+   ],
+   "team": "Customer care",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0184",
+   "type": "quality_complaint",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "qa-parts-replacement",
+    "qa-returns-dtc",
+    "qa-defect-report"
+   ],
+   "team": "Customer care",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0187",
+   "type": "quality_complaint",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "qa-returns-dtc",
+    "qa-parts-replacement",
+    "qa-safety-escalation"
+   ],
+   "team": "Customer care",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0188",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 0.6,
+   "retrieved": [
+    "man-fh520",
+    "ts-fh520-teeth",
+    "ts-engine-general"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0189",
+   "type": "unclear_other",
+   "segment": "dtc",
+   "safety": true,
+   "confidence": 1.0,
+   "retrieved": [
+    "gen-shipping",
+    "gen-contact",
+    "gen-parts-order"
+   ],
+   "team": "Front desk",
+   "cc": [
+    "Quality team"
+   ],
+   "priority": "urgent",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0190",
+   "type": "quality_complaint",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 0.85,
+   "retrieved": [
+    "qa-returns-dtc",
+    "qa-parts-replacement",
+    "qa-defect-report"
+   ],
+   "team": "Customer care",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0191",
+   "type": "unclear_other",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 0.3,
+   "retrieved": [],
+   "team": "Front desk",
+   "cc": [],
+   "priority": "low",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0193",
+   "type": "unclear_other",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "gen-shipping",
+    "gen-parts-order",
+    "gen-contact"
+   ],
+   "team": "Front desk",
+   "cc": [],
+   "priority": "low",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0195",
+   "type": "unclear_other",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 0.8,
+   "retrieved": [],
+   "team": "Front desk",
+   "cc": [],
+   "priority": "low",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0197",
+   "type": "unclear_other",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "gen-shipping",
+    "gen-parts-order",
+    "gen-contact"
+   ],
+   "team": "Front desk",
+   "cc": [],
+   "priority": "low",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0198",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 0.7,
+   "retrieved": [
+    "man-fhg7",
+    "ts-engine-general",
+    "ts-fhg7-output"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0199",
+   "type": "unclear_other",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 0.3,
+   "retrieved": [],
+   "team": "Front desk",
+   "cc": [],
+   "priority": "low",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0201",
+   "type": "unclear_other",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "gen-contact",
+    "gen-shipping",
+    "gen-parts-order"
+   ],
+   "team": "Front desk",
+   "cc": [],
+   "priority": "low",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0204",
+   "type": "unclear_other",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "gen-shipping",
+    "gen-contact",
+    "gen-parts-order"
+   ],
+   "team": "Front desk",
+   "cc": [],
+   "priority": "low",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0207",
+   "type": "quality_complaint",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 0.7,
+   "retrieved": [
+    "qa-returns-dtc",
+    "qa-parts-replacement",
+    "war-summary"
+   ],
+   "team": "Quality team",
+   "cc": [],
+   "priority": "high",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0208",
+   "type": "unclear_other",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "gen-shipping",
+    "gen-contact",
+    "gen-parts-order"
+   ],
+   "team": "Front desk",
+   "cc": [],
+   "priority": "low",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0209",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "man-fh520",
+    "ts-fh520-teeth",
+    "war-summary"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0213",
+   "type": "unclear_other",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 0.8,
+   "retrieved": [
+    "gen-shipping",
+    "gen-parts-order",
+    "gen-contact"
+   ],
+   "team": "Front desk",
+   "cc": [],
+   "priority": "low",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0214",
+   "type": "machine_trouble",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 0.6,
+   "retrieved": [
+    "man-fh520",
+    "man-fh340",
+    "man-fh210"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "high",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.003
+  },
+  {
+   "id": "inq-0215",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 0.7,
+   "retrieved": [
+    "ts-fh340-jam",
+    "man-fh340",
+    "man-fh210"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0216",
+   "type": "unclear_other",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 0.3,
+   "retrieved": [],
+   "team": "Front desk",
+   "cc": [],
+   "priority": "low",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0218",
+   "type": "unclear_other",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "gen-contact",
+    "gen-parts-order",
+    "gen-shipping"
+   ],
+   "team": "Front desk",
+   "cc": [],
+   "priority": "low",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0220",
+   "type": "quality_complaint",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 0.7,
+   "retrieved": [
+    "qa-defect-report",
+    "war-summary",
+    "qa-safety-escalation"
+   ],
+   "team": "Customer care",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0222",
+   "type": "unclear_other",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "gen-parts-order",
+    "gen-contact",
+    "gen-shipping"
+   ],
+   "team": "Front desk",
+   "cc": [],
+   "priority": "low",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0223",
+   "type": "unclear_other",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [],
+   "team": "Front desk",
+   "cc": [],
+   "priority": "low",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0224",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 0.6,
+   "retrieved": [
+    "man-fh340",
+    "ts-fh340-vibration",
+    "ts-fh340-jam"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0231",
+   "type": "unclear_other",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 0.3,
+   "retrieved": [
+    "gen-contact",
+    "gen-shipping",
+    "gen-parts-order"
+   ],
+   "team": "Front desk",
+   "cc": [],
+   "priority": "low",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0234",
+   "type": "unclear_other",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 0.3,
+   "retrieved": [],
+   "team": "Front desk",
+   "cc": [],
+   "priority": "low",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0235",
+   "type": "unclear_other",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "gen-shipping",
+    "gen-contact",
+    "gen-parts-order"
+   ],
+   "team": "Front desk",
+   "cc": [],
+   "priority": "low",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0236",
+   "type": "unclear_other",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 0.8,
+   "retrieved": [
+    "gen-contact",
+    "gen-shipping",
+    "gen-parts-order"
+   ],
+   "team": "Front desk",
+   "cc": [],
+   "priority": "low",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0238",
+   "type": "unclear_other",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "gen-shipping",
+    "gen-parts-order",
+    "gen-contact"
+   ],
+   "team": "Front desk",
+   "cc": [],
+   "priority": "low",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0239",
+   "type": "unclear_other",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 0.8,
+   "retrieved": [
+    "gen-shipping",
+    "gen-parts-order",
+    "gen-contact"
+   ],
+   "team": "Front desk",
+   "cc": [],
+   "priority": "low",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0241",
+   "type": "unclear_other",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "gen-parts-order",
+    "gen-shipping",
+    "gen-contact"
+   ],
+   "team": "Front desk",
+   "cc": [],
+   "priority": "low",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0244",
+   "type": "unclear_other",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "gen-shipping",
+    "gen-contact",
+    "gen-parts-order"
+   ],
+   "team": "Front desk",
+   "cc": [],
+   "priority": "low",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0245",
+   "type": "unclear_other",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 0.3,
+   "retrieved": [],
+   "team": "Front desk",
+   "cc": [],
+   "priority": "low",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0247",
+   "type": "unclear_other",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 0.8,
+   "retrieved": [
+    "gen-shipping",
+    "gen-parts-order",
+    "gen-contact"
+   ],
+   "team": "Front desk",
+   "cc": [],
+   "priority": "low",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0248",
+   "type": "unclear_other",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 0.3,
+   "retrieved": [],
+   "team": "Front desk",
+   "cc": [],
+   "priority": "low",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0249",
+   "type": "unclear_other",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 0.3,
+   "retrieved": [
+    "gen-shipping",
+    "gen-parts-order",
+    "gen-contact"
+   ],
+   "team": "Front desk",
+   "cc": [],
+   "priority": "low",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0252",
+   "type": "unclear_other",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 0.3,
+   "retrieved": [],
+   "team": "Front desk",
+   "cc": [],
+   "priority": "low",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0253",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 0.7,
+   "retrieved": [
+    "man-fh210",
+    "ts-fh210-hydraulic",
+    "war-summary"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0257",
+   "type": "quality_complaint",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "qa-defect-report",
+    "qa-safety-escalation",
+    "qa-returns-dtc"
+   ],
+   "team": "Customer care",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0259",
+   "type": "unclear_other",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 0.3,
+   "retrieved": [],
+   "team": "Front desk",
+   "cc": [],
+   "priority": "low",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0260",
+   "type": "unclear_other",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "gen-parts-order",
+    "gen-shipping",
+    "gen-contact"
+   ],
+   "team": "Front desk",
+   "cc": [],
+   "priority": "low",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0261",
+   "type": "unclear_other",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 0.3,
+   "retrieved": [
+    "gen-parts-order",
+    "gen-contact",
+    "gen-shipping"
+   ],
+   "team": "Front desk",
+   "cc": [],
+   "priority": "low",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0264",
+   "type": "unclear_other",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 0.3,
+   "retrieved": [],
+   "team": "Front desk",
+   "cc": [],
+   "priority": "low",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0265",
+   "type": "machine_trouble",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 0.76,
+   "retrieved": [
+    "man-fh340",
+    "ts-fh340-jam",
+    "ts-fh340-vibration"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "high",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0269",
+   "type": "unclear_other",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [],
+   "team": "Front desk",
+   "cc": [],
+   "priority": "low",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0271",
+   "type": "unclear_other",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "gen-contact",
+    "gen-shipping",
+    "gen-parts-order"
+   ],
+   "team": "Front desk",
+   "cc": [],
+   "priority": "low",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0273",
+   "type": "unclear_other",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "gen-shipping",
+    "gen-parts-order"
+   ],
+   "team": "Front desk",
+   "cc": [],
+   "priority": "low",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0278",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 0.6,
+   "retrieved": [
+    "man-fh520",
+    "war-summary",
+    "ts-fh520-teeth"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0280",
+   "type": "unclear_other",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 0.3,
+   "retrieved": [],
+   "team": "Front desk",
+   "cc": [],
+   "priority": "low",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0281",
+   "type": "partner_request",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "par-overview",
+    "par-territory",
+    "par-apply"
+   ],
+   "team": "Partner team",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0282",
+   "type": "partner_request",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 0.8,
+   "retrieved": [
+    "par-overview",
+    "par-tiers",
+    "par-apply"
+   ],
+   "team": "Partner team",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0283",
+   "type": "partner_request",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "par-apply",
+    "par-territory",
+    "par-overview"
+   ],
+   "team": "Partner team",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0285",
+   "type": "partner_request",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "par-overview",
+    "par-apply",
+    "par-territory"
+   ],
+   "team": "Partner team",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0289",
+   "type": "unclear_other",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 0.3,
+   "retrieved": [
+    "gen-parts-order",
+    "gen-contact",
+    "gen-shipping"
+   ],
+   "team": "Front desk",
+   "cc": [],
+   "priority": "low",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0291",
+   "type": "partner_request",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "par-tiers",
+    "par-overview",
+    "par-territory"
+   ],
+   "team": "Partner team",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0293",
+   "type": "partner_request",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "par-overview",
+    "par-marketing",
+    "par-territory"
+   ],
+   "team": "Partner team",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0296",
+   "type": "partner_request",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "par-overview",
+    "par-marketing",
+    "par-tiers"
+   ],
+   "team": "Partner team",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0297",
+   "type": "partner_request",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "par-overview",
+    "par-apply",
+    "par-territory"
+   ],
+   "team": "Partner team",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0300",
+   "type": "unclear_other",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 0.3,
+   "retrieved": [
+    "gen-parts-order",
+    "gen-shipping",
+    "gen-contact"
+   ],
+   "team": "Front desk",
+   "cc": [],
+   "priority": "low",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0303",
+   "type": "unclear_other",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 0.3,
+   "retrieved": [],
+   "team": "Front desk",
+   "cc": [],
+   "priority": "low",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0304",
+   "type": "partner_request",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "par-overview",
+    "par-apply",
+    "par-marketing"
+   ],
+   "team": "Partner team",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0305",
+   "type": "partner_request",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "par-territory",
+    "par-overview",
+    "par-apply"
+   ],
+   "team": "Partner team",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0307",
+   "type": "partner_request",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "par-marketing",
+    "par-overview",
+    "par-tiers"
+   ],
+   "team": "Partner team",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0310",
+   "type": "partner_request",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "par-tiers",
+    "par-territory",
+    "par-overview"
+   ],
+   "team": "Partner team",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0313",
+   "type": "partner_request",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "par-overview",
+    "par-tiers",
+    "par-apply"
+   ],
+   "team": "Partner team",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0315",
+   "type": "partner_request",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "par-territory",
+    "par-overview",
+    "par-apply"
+   ],
+   "team": "Partner team",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0316",
+   "type": "unclear_other",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 0.3,
+   "retrieved": [],
+   "team": "Front desk",
+   "cc": [],
+   "priority": "low",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0317",
+   "type": "partner_request",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "par-tiers",
+    "par-overview",
+    "par-apply"
+   ],
+   "team": "Partner team",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0318",
+   "type": "partner_request",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "par-marketing",
+    "par-overview",
+    "par-territory"
+   ],
+   "team": "Partner team",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0321",
+   "type": "partner_request",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 0.85,
+   "retrieved": [
+    "par-territory",
+    "par-apply",
+    "par-marketing"
+   ],
+   "team": "Partner team",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0322",
+   "type": "partner_request",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "par-tiers",
+    "par-overview",
+    "par-territory"
+   ],
+   "team": "Partner team",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0324",
+   "type": "partner_request",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "par-overview",
+    "par-tiers",
+    "par-apply"
+   ],
+   "team": "Partner team",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [
+    "possible_prompt_injection"
+   ],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0325",
+   "type": "unclear_other",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 0.3,
+   "retrieved": [],
+   "team": "Front desk",
+   "cc": [],
+   "priority": "low",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0326",
+   "type": "partner_request",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "par-territory",
+    "par-overview",
+    "par-apply"
+   ],
+   "team": "Partner team",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0330",
+   "type": "partner_request",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "par-marketing",
+    "par-tiers",
+    "par-overview"
+   ],
+   "team": "Partner team",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0335",
+   "type": "partner_request",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "par-marketing",
+    "par-overview",
+    "par-territory"
+   ],
+   "team": "Partner team",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0336",
+   "type": "partner_request",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "par-overview",
+    "par-territory",
+    "par-apply"
+   ],
+   "team": "Partner team",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0337",
+   "type": "partner_request",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "par-overview",
+    "par-marketing",
+    "par-apply"
+   ],
+   "team": "Partner team",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0339",
+   "type": "unclear_other",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 0.3,
+   "retrieved": [],
+   "team": "Front desk",
+   "cc": [],
+   "priority": "low",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0340",
+   "type": "partner_request",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "par-apply",
+    "par-overview",
+    "par-territory"
+   ],
+   "team": "Partner team",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0348",
+   "type": "unclear_other",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 0.3,
+   "retrieved": [],
+   "team": "Front desk",
+   "cc": [],
+   "priority": "low",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0351",
+   "type": "partner_request",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "par-apply"
+   ],
+   "team": "Partner team",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0352",
+   "type": "partner_request",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "par-overview",
+    "par-apply",
+    "par-territory"
+   ],
+   "team": "Partner team",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0353",
+   "type": "partner_request",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "par-marketing",
+    "par-overview",
+    "par-tiers"
+   ],
+   "team": "Partner team",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0354",
+   "type": "partner_request",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "par-apply",
+    "par-territory",
+    "par-overview"
+   ],
+   "team": "Partner team",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0355",
+   "type": "partner_request",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 0.85,
+   "retrieved": [
+    "par-tiers",
+    "par-apply",
+    "par-territory"
+   ],
+   "team": "Partner team",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0358",
+   "type": "partner_request",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 0.8,
+   "retrieved": [
+    "par-tiers",
+    "par-overview",
+    "par-marketing"
+   ],
+   "team": "Partner team",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0360",
+   "type": "unclear_other",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 0.3,
+   "retrieved": [],
+   "team": "Front desk",
+   "cc": [],
+   "priority": "low",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0362",
+   "type": "partner_request",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "par-overview",
+    "par-tiers",
+    "par-territory"
+   ],
+   "team": "Partner team",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0363",
+   "type": "unclear_other",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 0.3,
+   "retrieved": [],
+   "team": "Front desk",
+   "cc": [],
+   "priority": "low",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0366",
+   "type": "partner_request",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "par-overview",
+    "par-territory",
+    "par-apply"
+   ],
+   "team": "Partner team",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0367",
+   "type": "partner_request",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "par-apply",
+    "par-territory",
+    "par-overview"
+   ],
+   "team": "Partner team",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0368",
+   "type": "partner_request",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "par-overview",
+    "par-apply",
+    "par-territory"
+   ],
+   "team": "Partner team",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0369",
+   "type": "unclear_other",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 0.3,
+   "retrieved": [
+    "gen-parts-order",
+    "gen-shipping",
+    "gen-contact"
+   ],
+   "team": "Front desk",
+   "cc": [],
+   "priority": "low",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0371",
+   "type": "unclear_other",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 0.3,
+   "retrieved": [],
+   "team": "Front desk",
+   "cc": [],
+   "priority": "low",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0375",
+   "type": "partner_request",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "par-overview",
+    "par-tiers",
+    "par-apply"
+   ],
+   "team": "Partner team",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0378",
+   "type": "partner_request",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "par-marketing",
+    "par-overview",
+    "par-tiers"
+   ],
+   "team": "Partner team",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0380",
+   "type": "partner_request",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "par-overview",
+    "par-territory",
+    "par-apply"
+   ],
+   "team": "Partner team",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0381",
+   "type": "partner_request",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "par-apply",
+    "par-territory",
+    "par-overview"
+   ],
+   "team": "Partner team",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0382",
+   "type": "unclear_other",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 0.3,
+   "retrieved": [],
+   "team": "Front desk",
+   "cc": [],
+   "priority": "low",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0383",
+   "type": "partner_request",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "par-overview",
+    "par-apply",
+    "par-territory"
+   ],
+   "team": "Partner team",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0387",
+   "type": "partner_request",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "par-tiers",
+    "par-apply",
+    "par-overview"
+   ],
+   "team": "Partner team",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0388",
+   "type": "partner_request",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "par-marketing",
+    "par-overview",
+    "par-tiers"
+   ],
+   "team": "Partner team",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0389",
+   "type": "partner_request",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "par-apply",
+    "par-overview",
+    "par-territory"
+   ],
+   "team": "Partner team",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0393",
+   "type": "quality_complaint",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "qa-returns-dtc",
+    "qa-parts-replacement",
+    "qa-safety-escalation"
+   ],
+   "team": "Customer care",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0394",
+   "type": "quality_complaint",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 0.74,
+   "retrieved": [
+    "qa-returns-dtc",
+    "qa-parts-replacement",
+    "qa-defect-report"
+   ],
+   "team": "Quality team",
+   "cc": [],
+   "priority": "high",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0395",
+   "type": "quality_complaint",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "qa-defect-report",
+    "qa-freight-damage",
+    "qa-safety-escalation"
+   ],
+   "team": "Quality team",
+   "cc": [],
+   "priority": "high",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0400",
+   "type": "quality_complaint",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "war-summary",
+    "qa-returns-dtc",
+    "qa-safety-escalation"
+   ],
+   "team": "Quality team",
+   "cc": [],
+   "priority": "high",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0401",
+   "type": "quality_complaint",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 0.76,
+   "retrieved": [
+    "qa-freight-damage",
+    "qa-safety-escalation",
+    "qa-returns-dtc"
+   ],
+   "team": "Quality team",
+   "cc": [],
+   "priority": "high",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0402",
+   "type": "unclear_other",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "gen-contact",
+    "gen-parts-order",
+    "gen-shipping"
+   ],
+   "team": "Front desk",
+   "cc": [],
+   "priority": "low",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0405",
+   "type": "quality_complaint",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "qa-parts-replacement",
+    "qa-safety-escalation",
+    "war-summary"
+   ],
+   "team": "Customer care",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0407",
+   "type": "machine_trouble",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 0.7,
+   "retrieved": [
+    "man-fh340",
+    "ts-engine-general",
+    "ts-fh340-jam"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "high",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0408",
+   "type": "quality_complaint",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 0.76,
+   "retrieved": [
+    "qa-freight-damage",
+    "qa-defect-report",
+    "qa-returns-dtc"
+   ],
+   "team": "Quality team",
+   "cc": [],
+   "priority": "high",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0412",
+   "type": "machine_trouble",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 0.7,
+   "retrieved": [
+    "ts-fh340-vibration",
+    "man-fh340",
+    "ts-engine-general"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "high",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0414",
+   "type": "quality_complaint",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "qa-freight-damage",
+    "qa-safety-escalation",
+    "qa-defect-report"
+   ],
+   "team": "Quality team",
+   "cc": [],
+   "priority": "high",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0415",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 0.7,
+   "retrieved": [
+    "man-fh520",
+    "ts-fh520-teeth",
+    "war-summary"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0417",
+   "type": "machine_trouble",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 0.7,
+   "retrieved": [
+    "man-fhp90",
+    "ts-fhp90-pressure",
+    "war-summary"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "high",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0418",
+   "type": "quality_complaint",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "qa-freight-damage",
+    "qa-returns-dtc",
+    "qa-parts-replacement"
+   ],
+   "team": "Quality team",
+   "cc": [],
+   "priority": "high",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0421",
+   "type": "quality_complaint",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 0.7,
+   "retrieved": [
+    "qa-freight-damage",
+    "qa-parts-replacement",
+    "war-summary"
+   ],
+   "team": "Quality team",
+   "cc": [],
+   "priority": "high",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0422",
+   "type": "quality_complaint",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 0.8,
+   "retrieved": [
+    "qa-defect-report",
+    "qa-safety-escalation",
+    "qa-parts-replacement"
+   ],
+   "team": "Quality team",
+   "cc": [],
+   "priority": "high",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0424",
+   "type": "quality_complaint",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 0.88,
+   "retrieved": [
+    "qa-freight-damage",
+    "qa-returns-dtc",
+    "war-summary"
+   ],
+   "team": "Quality team",
+   "cc": [],
+   "priority": "high",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [
+    "possible_prompt_injection"
+   ],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0425",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": true,
+   "confidence": 1.0,
+   "retrieved": [
+    "ts-fh210-hydraulic",
+    "man-fh210",
+    "ts-engine-general"
+   ],
+   "team": "Service desk",
+   "cc": [
+    "Quality team"
+   ],
+   "priority": "urgent",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0426",
+   "type": "machine_trouble",
+   "segment": "b2b",
+   "safety": true,
+   "confidence": 1.0,
+   "retrieved": [
+    "man-fhg7",
+    "ts-fhg7-nostart",
+    "ts-fhg7-output"
+   ],
+   "team": "Service desk",
+   "cc": [
+    "Quality team"
+   ],
+   "priority": "urgent",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0428",
+   "type": "quality_complaint",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 0.74,
+   "retrieved": [
+    "qa-parts-replacement",
+    "qa-returns-dtc",
+    "war-summary"
+   ],
+   "team": "Quality team",
+   "cc": [],
+   "priority": "high",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0429",
+   "type": "quality_complaint",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "qa-freight-damage",
+    "qa-defect-report",
+    "war-summary"
+   ],
+   "team": "Quality team",
+   "cc": [],
+   "priority": "high",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0430",
+   "type": "quality_complaint",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 0.7,
+   "retrieved": [
+    "qa-defect-report",
+    "war-summary",
+    "qa-returns-dtc"
+   ],
+   "team": "Quality team",
+   "cc": [],
+   "priority": "high",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0431",
+   "type": "quality_complaint",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 0.88,
+   "retrieved": [
+    "qa-parts-replacement",
+    "qa-returns-dtc",
+    "war-summary"
+   ],
+   "team": "Quality team",
+   "cc": [],
+   "priority": "high",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0435",
+   "type": "machine_trouble",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 0.7,
+   "retrieved": [
+    "ts-fhp90-pressure",
+    "man-fhp90",
+    "ts-engine-general"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "high",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0436",
+   "type": "quality_complaint",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "qa-parts-replacement",
+    "war-summary",
+    "qa-freight-damage"
+   ],
+   "team": "Quality team",
+   "cc": [],
+   "priority": "high",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0438",
+   "type": "quality_complaint",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 0.88,
+   "retrieved": [
+    "qa-defect-report",
+    "war-summary",
+    "qa-freight-damage"
+   ],
+   "team": "Quality team",
+   "cc": [],
+   "priority": "high",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0439",
+   "type": "machine_trouble",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 0.7,
+   "retrieved": [
+    "ts-engine-general",
+    "war-summary",
+    "ts-fh210-hydraulic"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "high",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0442",
+   "type": "quality_complaint",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 0.85,
+   "retrieved": [
+    "qa-freight-damage",
+    "qa-returns-dtc",
+    "war-summary"
+   ],
+   "team": "Quality team",
+   "cc": [],
+   "priority": "high",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0443",
+   "type": "quality_complaint",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "qa-returns-dtc",
+    "qa-parts-replacement",
+    "qa-freight-damage"
+   ],
+   "team": "Quality team",
+   "cc": [],
+   "priority": "high",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0444",
+   "type": "quality_complaint",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "qa-freight-damage",
+    "qa-parts-replacement",
+    "war-summary"
+   ],
+   "team": "Quality team",
+   "cc": [],
+   "priority": "high",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0447",
+   "type": "unclear_other",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 0.3,
+   "retrieved": [
+    "gen-contact",
+    "gen-shipping",
+    "gen-parts-order"
+   ],
+   "team": "Front desk",
+   "cc": [],
+   "priority": "low",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0454",
+   "type": "quality_complaint",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 0.83,
+   "retrieved": [
+    "qa-freight-damage",
+    "qa-returns-dtc",
+    "war-summary"
+   ],
+   "team": "Quality team",
+   "cc": [],
+   "priority": "high",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0458",
+   "type": "quality_complaint",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "qa-freight-damage",
+    "qa-defect-report",
+    "war-summary"
+   ],
+   "team": "Quality team",
+   "cc": [],
+   "priority": "high",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0463",
+   "type": "quality_complaint",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "qa-freight-damage",
+    "qa-returns-dtc",
+    "war-summary"
+   ],
+   "team": "Quality team",
+   "cc": [],
+   "priority": "high",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0464",
+   "type": "machine_trouble",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 0.76,
+   "retrieved": [
+    "man-fh520",
+    "ts-fh520-teeth",
+    "ts-engine-general"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "high",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0465",
+   "type": "quality_complaint",
+   "segment": "b2b",
+   "safety": true,
+   "confidence": 0.8,
+   "retrieved": [
+    "qa-safety-escalation",
+    "qa-freight-damage",
+    "war-summary"
+   ],
+   "team": "Quality team",
+   "cc": [],
+   "priority": "urgent",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0466",
+   "type": "quality_complaint",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 0.7,
+   "retrieved": [
+    "qa-freight-damage",
+    "qa-safety-escalation",
+    "qa-returns-dtc"
+   ],
+   "team": "Quality team",
+   "cc": [],
+   "priority": "high",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0467",
+   "type": "quality_complaint",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "qa-freight-damage",
+    "qa-parts-replacement",
+    "qa-defect-report"
+   ],
+   "team": "Customer care",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0469",
+   "type": "machine_trouble",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 0.7,
+   "retrieved": [
+    "ts-fhp90-pressure",
+    "man-fhp90",
+    "war-summary"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "high",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0470",
+   "type": "quality_complaint",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 0.7,
+   "retrieved": [
+    "qa-freight-damage",
+    "qa-safety-escalation",
+    "war-summary"
+   ],
+   "team": "Quality team",
+   "cc": [],
+   "priority": "high",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0471",
+   "type": "machine_trouble",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "ts-fh340-vibration",
+    "ts-fh340-jam",
+    "war-summary"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "high",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0473",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 0.85,
+   "retrieved": [
+    "ts-fhp90-pressure",
+    "man-fhp90",
+    "ts-engine-general"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0474",
+   "type": "machine_trouble",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 0.8,
+   "retrieved": [
+    "ts-fh520-teeth",
+    "man-fh520",
+    "war-summary"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "high",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0475",
+   "type": "machine_trouble",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 0.85,
+   "retrieved": [
+    "ts-fh340-jam",
+    "man-fh340",
+    "war-summary"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "high",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0476",
+   "type": "machine_trouble",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 0.8,
+   "retrieved": [
+    "ts-fhg7-nostart",
+    "ts-fhg7-output",
+    "man-fhg7"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "high",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0479",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "man-fh210",
+    "ts-fh210-hydraulic",
+    "ts-engine-general"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0483",
+   "type": "machine_trouble",
+   "segment": "b2b",
+   "safety": true,
+   "confidence": 1.0,
+   "retrieved": [
+    "ts-fhg7-nostart",
+    "war-summary",
+    "man-fhg7"
+   ],
+   "team": "Service desk",
+   "cc": [
+    "Quality team"
+   ],
+   "priority": "urgent",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0485",
+   "type": "unclear_other",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 0.3,
+   "retrieved": [],
+   "team": "Front desk",
+   "cc": [],
+   "priority": "low",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0486",
+   "type": "unclear_other",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 0.3,
+   "retrieved": [],
+   "team": "Front desk",
+   "cc": [],
+   "priority": "low",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0488",
+   "type": "machine_trouble",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "man-fhg7",
+    "ts-fhg7-nostart",
+    "ts-fhg7-output"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "high",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.004
+  },
+  {
+   "id": "inq-0490",
+   "type": "machine_trouble",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "man-fh210",
+    "ts-fh210-hydraulic",
+    "war-summary"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "high",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0492",
+   "type": "machine_trouble",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "man-fh520",
+    "ts-fh520-teeth",
+    "war-summary"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "high",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0493",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "ts-fhg7-output",
+    "man-fhg7",
+    "ts-fhg7-nostart"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0496",
+   "type": "quality_complaint",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "qa-safety-escalation",
+    "war-summary"
+   ],
+   "team": "Quality team",
+   "cc": [],
+   "priority": "high",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0499",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "ts-fhg7-nostart",
+    "ts-fhg7-output",
+    "ts-engine-general"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0504",
+   "type": "machine_trouble",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 0.85,
+   "retrieved": [
+    "ts-fhp90-pressure",
+    "man-fhp90",
+    "war-summary"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "high",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.004
+  },
+  {
+   "id": "inq-0505",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 0.8,
+   "retrieved": [
+    "man-fhg7",
+    "ts-fhg7-output",
+    "ts-fhg7-nostart"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0508",
+   "type": "quality_complaint",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 0.7,
+   "retrieved": [
+    "qa-safety-escalation",
+    "qa-defect-report",
+    "qa-returns-dtc"
+   ],
+   "team": "Quality team",
+   "cc": [],
+   "priority": "high",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0509",
+   "type": "machine_trouble",
+   "segment": "b2b",
+   "safety": true,
+   "confidence": 1.0,
+   "retrieved": [
+    "ts-fhg7-output",
+    "man-fhg7",
+    "ts-fhg7-nostart"
+   ],
+   "team": "Service desk",
+   "cc": [
+    "Quality team"
+   ],
+   "priority": "urgent",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0511",
+   "type": "machine_trouble",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 0.85,
+   "retrieved": [
+    "ts-fh520-teeth",
+    "man-fh520",
+    "ts-engine-general"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "high",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0513",
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety": true,
+   "confidence": 0.7,
+   "retrieved": [
+    "ts-fhg7-output",
+    "man-fhg7",
+    "ts-fhg7-nostart"
+   ],
+   "team": "Service desk",
+   "cc": [
+    "Quality team"
+   ],
+   "priority": "urgent",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0514",
+   "type": "machine_trouble",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "man-fhg7",
+    "ts-fhg7-nostart",
+    "ts-fhg7-output"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "high",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0516",
+   "type": "unclear_other",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 0.85,
+   "retrieved": [
+    "gen-contact",
+    "gen-shipping",
+    "gen-parts-order"
+   ],
+   "team": "Front desk",
+   "cc": [],
+   "priority": "low",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0517",
+   "type": "unclear_other",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "gen-contact",
+    "gen-parts-order",
+    "gen-shipping"
+   ],
+   "team": "Front desk",
+   "cc": [],
+   "priority": "low",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0519",
+   "type": "unclear_other",
+   "segment": "b2b",
+   "safety": true,
+   "confidence": 1.0,
+   "retrieved": [
+    "gen-parts-order",
+    "gen-shipping",
+    "gen-contact"
+   ],
+   "team": "Front desk",
+   "cc": [
+    "Quality team"
+   ],
+   "priority": "urgent",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0520",
+   "type": "unclear_other",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [],
+   "team": "Front desk",
+   "cc": [],
+   "priority": "low",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0526",
+   "type": "unclear_other",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 0.8,
+   "retrieved": [],
+   "team": "Front desk",
+   "cc": [],
+   "priority": "low",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.003
+  },
+  {
+   "id": "inq-0529",
+   "type": "unclear_other",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [],
+   "team": "Front desk",
+   "cc": [],
+   "priority": "low",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0530",
+   "type": "quality_complaint",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "war-summary",
+    "qa-freight-damage",
+    "qa-defect-report"
+   ],
+   "team": "Quality team",
+   "cc": [],
+   "priority": "high",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0534",
+   "type": "unclear_other",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 0.85,
+   "retrieved": [],
+   "team": "Front desk",
+   "cc": [],
+   "priority": "low",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0535",
+   "type": "partner_request",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "par-territory",
+    "par-overview",
+    "par-apply"
+   ],
+   "team": "Partner team",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0537",
+   "type": "quality_complaint",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 0.6,
+   "retrieved": [
+    "qa-defect-report",
+    "qa-returns-dtc",
+    "war-summary"
+   ],
+   "team": "Quality team",
+   "cc": [],
+   "priority": "high",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0538",
+   "type": "machine_trouble",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 0.8,
+   "retrieved": [
+    "man-fh340",
+    "ts-fh340-vibration",
+    "ts-fh340-jam"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "high",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0539",
+   "type": "unclear_other",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [],
+   "team": "Front desk",
+   "cc": [],
+   "priority": "low",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0541",
+   "type": "quality_complaint",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "qa-safety-escalation",
+    "war-summary",
+    "qa-parts-replacement"
+   ],
+   "team": "Quality team",
+   "cc": [],
+   "priority": "high",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0543",
+   "type": "unclear_other",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "gen-parts-order",
+    "gen-contact",
+    "gen-shipping"
+   ],
+   "team": "Front desk",
+   "cc": [],
+   "priority": "low",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0544",
+   "type": "unclear_other",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 0.3,
+   "retrieved": [],
+   "team": "Front desk",
+   "cc": [],
+   "priority": "low",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0546",
+   "type": "unclear_other",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 0.3,
+   "retrieved": [],
+   "team": "Front desk",
+   "cc": [],
+   "priority": "low",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0547",
+   "type": "machine_trouble",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 0.8,
+   "retrieved": [
+    "ts-fh520-teeth",
+    "ts-engine-general",
+    "war-summary"
+   ],
+   "team": "Service desk",
+   "cc": [],
+   "priority": "high",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0550",
+   "type": "unclear_other",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [],
+   "team": "Front desk",
+   "cc": [],
+   "priority": "low",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0551",
+   "type": "partner_request",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 0.7,
+   "retrieved": [
+    "par-territory",
+    "par-apply",
+    "par-overview"
+   ],
+   "team": "Partner team",
+   "cc": [],
+   "priority": "normal",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0556",
+   "type": "unclear_other",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [],
+   "team": "Front desk",
+   "cc": [],
+   "priority": "low",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.001
+  },
+  {
+   "id": "inq-0557",
+   "type": "unclear_other",
+   "segment": "b2b",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "gen-shipping",
+    "gen-contact",
+    "gen-parts-order"
+   ],
+   "team": "Front desk",
+   "cc": [],
+   "priority": "low",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  },
+  {
+   "id": "inq-0559",
+   "type": "unclear_other",
+   "segment": "dtc",
+   "safety": false,
+   "confidence": 1.0,
+   "retrieved": [
+    "gen-contact",
+    "gen-parts-order",
+    "gen-shipping"
+   ],
+   "team": "Front desk",
+   "cc": [],
+   "priority": "low",
+   "draft_removed": false,
+   "violations": [],
+   "input_flags": [],
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "cost_usd": 0,
+   "seconds": 0.002
+  }
+ ]
+}

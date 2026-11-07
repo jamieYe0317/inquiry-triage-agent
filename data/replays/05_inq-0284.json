@@ -1,0 +1,100 @@
+{
+ "label": "Business: wants to become a partner",
+ "mode": "offline",
+ "recorded": "2026-11-07",
+ "expected": {
+  "type": "partner_request",
+  "segment": "b2b",
+  "team": "Partner team",
+  "priority": "normal",
+  "expected_docs": [
+   "par-marketing"
+  ]
+ },
+ "case": {
+  "inquiry": {
+   "id": "inq-0284",
+   "subject": "Fair display help?",
+   "body": "Howdy from Prairie View Farm Supply! We've been selling your splitters since spring and the county fair is coming up in a few weeks. Any chance of a demo unit for our booth, or some co-op marketing help? We'd love to show folks the line.\n\nSam Heller, Owner",
+   "sender_name": "Sam Heller",
+   "sender_org": "Prairie View Farm Supply"
+  },
+  "input_flags": [],
+  "route": {
+   "type": "partner_request",
+   "segment": "b2b",
+   "safety_issue": false,
+   "confidence": 1.0,
+   "also_mentions": [],
+   "retrieve": true,
+   "search_query": "Subject: Fair display help?\nOrganization: Prairie View Farm Supply\nHowdy from Prairie View Farm Supply! We've been selling your splitters since spring and the county fair is coming up in a few weeks. Any chance of a demo unit for our booth, or some co-op marketing help? We'd love to show folks the line.\n\nSam Heller, Owner",
+   "reason": "keyword counts {'machine_trouble': 0, 'quality_complaint': 0, 'partner_request': 2, 'unclear_other': 0}"
+  },
+  "fields": {
+   "model": null,
+   "serial": null,
+   "order_number": null
+  },
+  "retrieval_skipped_reason": null,
+  "retrieved": [
+   {
+    "doc_id": "par-marketing",
+    "title": "Co-op Marketing and Demo Unit Program",
+    "source_type": "partner",
+    "heading": "Co-op marketing",
+    "text": "Partners can ask for co-op marketing support. This can cover local ads, fair or trade show booths, and store signage. Fernhollow does not list amounts on this page. The Partner team sets what it can support for each request.",
+    "score": 41.495
+   },
+   {
+    "doc_id": "par-overview",
+    "title": "Fernhollow Partner Program Overview",
+    "source_type": "partner",
+    "heading": "Related pages",
+    "text": "For territories, see the Partner Territory FAQ. For tiers, see Partner Tiers and Requirements. For marketing support and demo units, see the Co-op Marketing and Demo Unit Program.",
+    "score": 19.618
+   },
+   {
+    "doc_id": "par-tiers",
+    "title": "Partner Tiers and Requirements",
+    "source_type": "partner",
+    "heading": "What each tier looks for",
+    "text": "- Bronze: a new or small partner. It sells Fernhollow machines and may do basic service.\n- Silver: a partner with a larger volume, at least one trained technician, and a demo unit on display.\n- Gold: a partner with the highest volume, several trained technicians, demo units on display, and full warranty service capability.\nThe Partner team sets the exact requirements in the signed partner agreement.",
+    "score": 10.448
+   }
+  ],
+  "draft": {
+   "customer_ask": "Howdy from Prairie View Farm Supply!",
+   "facts_given": [],
+   "facts_missing": [],
+   "category": "partner request",
+   "cited_doc_ids": [
+    "par-marketing",
+    "par-overview",
+    "par-tiers"
+   ],
+   "next_steps": [
+    "Review the business against the cited partner documents.",
+    "Reply with the next step in the partner process."
+   ],
+   "holding_reply": "Thanks for your interest in working with Fernhollow. Our partner team will review your message and reply."
+  },
+  "draft_guard": {
+   "passed": true,
+   "violations": []
+  },
+  "draft_removed": false,
+  "handoff": {
+   "team": "Partner team",
+   "cc": [],
+   "priority": "normal",
+   "added_steps": []
+  },
+  "usage": {},
+  "timings_ms": {
+   "guard_in": 0.1,
+   "route": 0.1,
+   "retrieve": 0.8,
+   "draft": 0.0
+  }
+ }
+}

@@ -1,0 +1,106 @@
+{
+ "label": "Customer: damaged or missing parts",
+ "mode": "offline",
+ "recorded": "2026-11-07",
+ "expected": {
+  "type": "quality_complaint",
+  "segment": "dtc",
+  "team": "Customer care",
+  "priority": "normal",
+  "expected_docs": [
+   "qa-returns-dtc"
+  ]
+ },
+ "case": {
+  "inquiry": {
+   "id": "inq-0121",
+   "subject": "Rust on a new chipper",
+   "body": "Hey, just unboxed my new FH-340 and there is paint flaking off the hopper and a few rust spots on the frame already. Looks like it sat somewhere damp. I'm still happy to keep it if there's something you can do, just wanted to flag it and see what my options are. Thanks!",
+   "sender_name": "Nolan Brightwater",
+   "sender_org": null
+  },
+  "input_flags": [],
+  "route": {
+   "type": "quality_complaint",
+   "segment": "dtc",
+   "safety_issue": false,
+   "confidence": 1.0,
+   "also_mentions": [],
+   "retrieve": true,
+   "search_query": "Subject: Rust on a new chipper\nHey, just unboxed my new FH-340 and there is paint flaking off the hopper and a few rust spots on the frame already. Looks like it sat somewhere damp. I'm still happy to keep it if there's something you can do, just wanted to flag it and see what my options are. Thanks!",
+   "reason": "keyword counts {'machine_trouble': 0, 'quality_complaint': 2, 'partner_request': 0, 'unclear_other': 0}"
+  },
+  "fields": {
+   "model": "FH-340",
+   "serial": null,
+   "order_number": null
+  },
+  "retrieval_skipped_reason": null,
+  "retrieved": [
+   {
+    "doc_id": "qa-returns-dtc",
+    "title": "Returns and Damaged-on-Arrival Policy for Customers",
+    "source_type": "quality",
+    "heading": "Return window",
+    "text": "You may ask to return a new, unused machine within 30 days of delivery. The machine must be in its original box and in its original condition. Used machines go through the warranty process instead.",
+    "score": 6.84
+   },
+   {
+    "doc_id": "qa-parts-replacement",
+    "title": "Replacement Parts Process",
+    "source_type": "quality",
+    "heading": "Is the part covered?",
+    "text": "Customer care or the Quality team confirms if a part is covered before it ships. A part may be covered when it is missing from a new machine or when it failed from a defect. A worn part, such as a dull blade, is usually a wear part and is not a defect. A Fernhollow staff member reviews each request and decides. Do not assume a part is free until staff confirm it in writing.",
+    "score": 5.762
+   },
+   {
+    "doc_id": "qa-safety-escalation",
+    "title": "Safety Escalation Rule",
+    "source_type": "quality",
+    "heading": "What counts as a safety case",
+    "text": "Any report of one of these is a safety case:\n- fire\n- smoke\n- burns\n- a fuel leak\n- electric shock\n- parts thrown from a machine\n- injury\nThis applies to every Fernhollow machine: the FH-210 log splitter, the FH-340 wood chipper, the FH-520 stump grinder, the FH-P90 pressure washer, and the FH-G7 generator. It applies if the report comes from a customer, a dealer, or a distributor.",
+    "score": 5.004
+   }
+  ],
+  "draft": {
+   "customer_ask": "Hey, just unboxed my new FH-340 and there is paint flaking off the hopper and a few rust spots on the frame already.",
+   "facts_given": [
+    "model: FH-340"
+   ],
+   "facts_missing": [
+    "serial"
+   ],
+   "category": "quality complaint",
+   "cited_doc_ids": [
+    "qa-returns-dtc",
+    "qa-parts-replacement",
+    "qa-safety-escalation"
+   ],
+   "next_steps": [
+    "Ask for photos and the order or serial number if they are missing.",
+    "Review the case under the cited policy and decide the remedy."
+   ],
+   "holding_reply": "Thanks for letting us know. A member of our team will review your report and contact you about next steps."
+  },
+  "draft_guard": {
+   "passed": true,
+   "violations": []
+  },
+  "draft_removed": false,
+  "handoff": {
+   "team": "Customer care",
+   "cc": [],
+   "priority": "normal",
+   "added_steps": [
+    "Ask the sender for the serial number."
+   ]
+  },
+  "usage": {},
+  "timings_ms": {
+   "guard_in": 0.1,
+   "route": 0.1,
+   "retrieve": 0.6,
+   "draft": 0.0
+  }
+ }
+}

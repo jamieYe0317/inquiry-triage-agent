@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.env
+.streamlit/secrets.toml
+eval/results/*.jsonl
+.DS_Store
+.claude/

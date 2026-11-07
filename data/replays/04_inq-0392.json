@@ -1,0 +1,107 @@
+{
+ "label": "Dealer: defect across several units",
+ "mode": "offline",
+ "recorded": "2026-11-07",
+ "expected": {
+  "type": "quality_complaint",
+  "segment": "b2b",
+  "team": "Quality team",
+  "priority": "high",
+  "expected_docs": [
+   "qa-parts-replacement"
+  ]
+ },
+ "case": {
+  "inquiry": {
+   "id": "inq-0392",
+   "subject": "Wrong parts for FH-340",
+   "body": "The replacement parts you sent for our FH-340 orders were wrong or broken on arrival, again. Order FE-109870. Please advise how to return and replace. - Gail, AP, Brookfield Equipment",
+   "sender_name": "Gail Pemberton",
+   "sender_org": "Brookfield Equipment"
+  },
+  "input_flags": [],
+  "route": {
+   "type": "quality_complaint",
+   "segment": "b2b",
+   "safety_issue": false,
+   "confidence": 1.0,
+   "also_mentions": [],
+   "retrieve": true,
+   "search_query": "Subject: Wrong parts for FH-340\nOrganization: Brookfield Equipment\nThe replacement parts you sent for our FH-340 orders were wrong or broken on arrival, again. Order FE-109870. Please advise how to return and replace. - Gail, AP, Brookfield Equipment",
+   "reason": "keyword counts {'machine_trouble': 0, 'quality_complaint': 3, 'partner_request': 0, 'unclear_other': 0}"
+  },
+  "fields": {
+   "model": "FH-340",
+   "serial": null,
+   "order_number": "FE-109870"
+  },
+  "retrieval_skipped_reason": null,
+  "retrieved": [
+   {
+    "doc_id": "qa-parts-replacement",
+    "title": "Replacement Parts Process",
+    "source_type": "quality",
+    "heading": "Wrong or defective replacement parts",
+    "text": "If Fernhollow sends the wrong part, or the replacement part is defective, tell Customer care or the Quality team. Partners should use the Partner Defect Report Procedure for repeat problems. Send the part number, the packing slip, and photos. Keep the wrong part until staff give instructions.",
+    "score": 18.237
+   },
+   {
+    "doc_id": "qa-returns-dtc",
+    "title": "Returns and Damaged-on-Arrival Policy for Customers",
+    "source_type": "quality",
+    "heading": "What to send",
+    "text": "Send Customer care these items:\n1. Your order number.\n2. The model, such as FH-340 wood chipper.\n3. The serial number from the label.\n4. Photos of the problem.\n5. A short description of what happened.\nUse the web form on example.com or call 555-0100 during office hours.",
+    "score": 14.275
+   },
+   {
+    "doc_id": "qa-freight-damage",
+    "title": "Freight Damage and Shipment Discrepancy Claims",
+    "source_type": "quality",
+    "heading": "Wrong items or short quantities",
+    "text": "Compare the packing list with the items you received. Tell the Quality team which items are wrong or missing. Do not return anything until the Quality team gives instructions.",
+    "score": 12.46
+   }
+  ],
+  "draft": {
+   "customer_ask": "The replacement parts you sent for our FH-340 orders were wrong or broken on arrival, again.",
+   "facts_given": [
+    "model: FH-340",
+    "order_number: FE-109870"
+   ],
+   "facts_missing": [
+    "serial"
+   ],
+   "category": "quality complaint",
+   "cited_doc_ids": [
+    "qa-parts-replacement",
+    "qa-returns-dtc",
+    "qa-freight-damage"
+   ],
+   "next_steps": [
+    "Ask for photos and the order or serial number if they are missing.",
+    "Review the case under the cited policy and decide the remedy."
+   ],
+   "holding_reply": "Thanks for letting us know. A member of our team will review your report and contact you about next steps."
+  },
+  "draft_guard": {
+   "passed": true,
+   "violations": []
+  },
+  "draft_removed": false,
+  "handoff": {
+   "team": "Quality team",
+   "cc": [],
+   "priority": "high",
+   "added_steps": [
+    "Ask the sender for the serial number."
+   ]
+  },
+  "usage": {},
+  "timings_ms": {
+   "guard_in": 0.0,
+   "route": 0.0,
+   "retrieve": 0.5,
+   "draft": 0.0
+  }
+ }
+}

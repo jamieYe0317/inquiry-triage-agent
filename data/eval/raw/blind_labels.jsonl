@@ -1,0 +1,80 @@
+{"id": "inq-0115", "type": "machine_trouble", "segment": "dtc", "safety": false, "unsure": false, "note": ""}
+{"id": "inq-0026", "type": "machine_trouble", "segment": "dtc", "safety": true, "unsure": false, "note": ""}
+{"id": "inq-0282", "type": "partner_request", "segment": "b2b", "safety": false, "unsure": false, "note": ""}
+{"id": "inq-0251", "type": "unclear_other", "segment": "dtc", "safety": false, "unsure": false, "note": ""}
+{"id": "inq-0229", "type": "unclear_other", "segment": "dtc", "safety": false, "unsure": false, "note": ""}
+{"id": "inq-0143", "type": "quality_complaint", "segment": "dtc", "safety": false, "unsure": true, "note": "return of working unit; guide lists return request but unit not defective"}
+{"id": "inq-0105", "type": "machine_trouble", "segment": "dtc", "safety": false, "unsure": false, "note": ""}
+{"id": "inq-0559", "type": "unclear_other", "segment": "b2b", "safety": false, "unsure": false, "note": ""}
+{"id": "inq-0090", "type": "machine_trouble", "segment": "dtc", "safety": true, "unsure": false, "note": ""}
+{"id": "inq-0433", "type": "quality_complaint", "segment": "b2b", "safety": false, "unsure": false, "note": ""}
+{"id": "inq-0033", "type": "machine_trouble", "segment": "dtc", "safety": false, "unsure": false, "note": ""}
+{"id": "inq-0031", "type": "machine_trouble", "segment": "dtc", "safety": false, "unsure": false, "note": ""}
+{"id": "inq-0096", "type": "machine_trouble", "segment": "dtc", "safety": false, "unsure": false, "note": ""}
+{"id": "inq-0224", "type": "unclear_other", "segment": "dtc", "safety": false, "unsure": false, "note": ""}
+{"id": "inq-0239", "type": "unclear_other", "segment": "dtc", "safety": false, "unsure": false, "note": ""}
+{"id": "inq-0518", "type": "unclear_other", "segment": "b2b", "safety": false, "unsure": true, "note": "spam signed by a company; segment unclear"}
+{"id": "inq-0028", "type": "machine_trouble", "segment": "dtc", "safety": false, "unsure": false, "note": ""}
+{"id": "inq-0204", "type": "unclear_other", "segment": "dtc", "safety": false, "unsure": false, "note": ""}
+{"id": "inq-0430", "type": "quality_complaint", "segment": "b2b", "safety": false, "unsure": false, "note": ""}
+{"id": "inq-0226", "type": "unclear_other", "segment": "dtc", "safety": false, "unsure": false, "note": ""}
+{"id": "inq-0460", "type": "unclear_other", "segment": "b2b", "safety": true, "unsure": true, "note": "invoice request main; fuel leak and heat reported secondhand, safety borderline"}
+{"id": "inq-0285", "type": "partner_request", "segment": "b2b", "safety": false, "unsure": false, "note": ""}
+{"id": "inq-0007", "type": "machine_trouble", "segment": "dtc", "safety": false, "unsure": false, "note": ""}
+{"id": "inq-0164", "type": "quality_complaint", "segment": "dtc", "safety": false, "unsure": false, "note": ""}
+{"id": "inq-0349", "type": "partner_request", "segment": "b2b", "safety": false, "unsure": false, "note": ""}
+{"id": "inq-0160", "type": "quality_complaint", "segment": "dtc", "safety": false, "unsure": false, "note": ""}
+{"id": "inq-0221", "type": "unclear_other", "segment": "dtc", "safety": false, "unsure": false, "note": ""}
+{"id": "inq-0345", "type": "partner_request", "segment": "b2b", "safety": false, "unsure": false, "note": ""}
+{"id": "inq-0095", "type": "machine_trouble", "segment": "dtc", "safety": false, "unsure": false, "note": ""}
+{"id": "inq-0390", "type": "partner_request", "segment": "b2b", "safety": false, "unsure": false, "note": ""}
+{"id": "inq-0100", "type": "machine_trouble", "segment": "dtc", "safety": false, "unsure": false, "note": ""}
+{"id": "inq-0368", "type": "partner_request", "segment": "b2b", "safety": false, "unsure": false, "note": ""}
+{"id": "inq-0353", "type": "partner_request", "segment": "b2b", "safety": false, "unsure": false, "note": ""}
+{"id": "inq-0271", "type": "unclear_other", "segment": "dtc", "safety": false, "unsure": false, "note": ""}
+{"id": "inq-0045", "type": "machine_trouble", "segment": "dtc", "safety": false, "unsure": false, "note": ""}
+{"id": "inq-0471", "type": "machine_trouble", "segment": "b2b", "safety": false, "unsure": false, "note": ""}
+{"id": "inq-0550", "type": "unclear_other", "segment": "b2b", "safety": false, "unsure": false, "note": ""}
+{"id": "inq-0128", "type": "quality_complaint", "segment": "dtc", "safety": false, "unsure": false, "note": ""}
+{"id": "inq-0388", "type": "partner_request", "segment": "b2b", "safety": false, "unsure": false, "note": ""}
+{"id": "inq-0081", "type": "quality_complaint", "segment": "dtc", "safety": true, "unsure": true, "note": "fuel leak on new-sounding unit with refund demand; could be machine_trouble"}
+{"id": "inq-0301", "type": "partner_request", "segment": "b2b", "safety": false, "unsure": false, "note": ""}
+{"id": "inq-0371", "type": "partner_request", "segment": "b2b", "safety": false, "unsure": false, "note": ""}
+{"id": "inq-0197", "type": "unclear_other", "segment": "dtc", "safety": false, "unsure": false, "note": ""}
+{"id": "inq-0072", "type": "quality_complaint", "segment": "dtc", "safety": false, "unsure": false, "note": ""}
+{"id": "inq-0047", "type": "machine_trouble", "segment": "dtc", "safety": false, "unsure": false, "note": ""}
+{"id": "inq-0234", "type": "unclear_other", "segment": "dtc", "safety": false, "unsure": false, "note": ""}
+{"id": "inq-0297", "type": "partner_request", "segment": "b2b", "safety": false, "unsure": false, "note": ""}
+{"id": "inq-0082", "type": "machine_trouble", "segment": "dtc", "safety": false, "unsure": false, "note": ""}
+{"id": "inq-0104", "type": "machine_trouble", "segment": "dtc", "safety": false, "unsure": false, "note": ""}
+{"id": "inq-0465", "type": "unclear_other", "segment": "b2b", "safety": true, "unsure": true, "note": "three mixed asks, none dominant; secondhand fuel seep and heat report"}
+{"id": "inq-0374", "type": "partner_request", "segment": "b2b", "safety": false, "unsure": false, "note": ""}
+{"id": "inq-0167", "type": "quality_complaint", "segment": "dtc", "safety": false, "unsure": false, "note": ""}
+{"id": "inq-0380", "type": "partner_request", "segment": "b2b", "safety": false, "unsure": false, "note": ""}
+{"id": "inq-0364", "type": "partner_request", "segment": "b2b", "safety": false, "unsure": false, "note": ""}
+{"id": "inq-0215", "type": "unclear_other", "segment": "dtc", "safety": false, "unsure": false, "note": ""}
+{"id": "inq-0274", "type": "unclear_other", "segment": "dtc", "safety": false, "unsure": false, "note": ""}
+{"id": "inq-0074", "type": "machine_trouble", "segment": "dtc", "safety": false, "unsure": false, "note": ""}
+{"id": "inq-0176", "type": "quality_complaint", "segment": "dtc", "safety": false, "unsure": true, "note": "refund demand for working unit that is underpowered; not defective"}
+{"id": "inq-0547", "type": "unclear_other", "segment": "b2b", "safety": false, "unsure": false, "note": ""}
+{"id": "inq-0168", "type": "quality_complaint", "segment": "dtc", "safety": false, "unsure": false, "note": ""}
+{"id": "inq-0474", "type": "machine_trouble", "segment": "b2b", "safety": false, "unsure": true, "note": "parts kit question for slow cutting; could be unclear_other"}
+{"id": "inq-0389", "type": "partner_request", "segment": "b2b", "safety": false, "unsure": false, "note": ""}
+{"id": "inq-0277", "type": "unclear_other", "segment": "dtc", "safety": false, "unsure": false, "note": ""}
+{"id": "inq-0225", "type": "unclear_other", "segment": "dtc", "safety": false, "unsure": false, "note": ""}
+{"id": "inq-0333", "type": "partner_request", "segment": "b2b", "safety": false, "unsure": false, "note": ""}
+{"id": "inq-0058", "type": "machine_trouble", "segment": "dtc", "safety": true, "unsure": true, "note": "smoking unit; asks replace or repair, age unknown"}
+{"id": "inq-0235", "type": "unclear_other", "segment": "dtc", "safety": false, "unsure": false, "note": ""}
+{"id": "inq-0324", "type": "partner_request", "segment": "b2b", "safety": false, "unsure": false, "note": ""}
+{"id": "inq-0411", "type": "quality_complaint", "segment": "b2b", "safety": true, "unsure": false, "note": ""}
+{"id": "inq-0275", "type": "unclear_other", "segment": "dtc", "safety": false, "unsure": false, "note": ""}
+{"id": "inq-0068", "type": "machine_trouble", "segment": "dtc", "safety": false, "unsure": false, "note": ""}
+{"id": "inq-0217", "type": "unclear_other", "segment": "dtc", "safety": false, "unsure": false, "note": ""}
+{"id": "inq-0323", "type": "partner_request", "segment": "b2b", "safety": false, "unsure": false, "note": ""}
+{"id": "inq-0218", "type": "unclear_other", "segment": "dtc", "safety": false, "unsure": false, "note": ""}
+{"id": "inq-0512", "type": "machine_trouble", "segment": "b2b", "safety": false, "unsure": false, "note": ""}
+{"id": "inq-0406", "type": "quality_complaint", "segment": "b2b", "safety": false, "unsure": false, "note": ""}
+{"id": "inq-0470", "type": "quality_complaint", "segment": "b2b", "safety": false, "unsure": false, "note": ""}
+{"id": "inq-0147", "type": "quality_complaint", "segment": "dtc", "safety": false, "unsure": false, "note": ""}
+{"id": "inq-0272", "type": "unclear_other", "segment": "dtc", "safety": false, "unsure": false, "note": ""}
+{"id": "inq-0253", "type": "unclear_other", "segment": "dtc", "safety": false, "unsure": false, "note": ""}

@@ -1,0 +1,107 @@
+{
+ "label": "Customer: safety detail buried in the text",
+ "mode": "offline",
+ "recorded": "2026-11-07",
+ "expected": {
+  "type": "machine_trouble",
+  "segment": "dtc",
+  "team": "Service desk",
+  "priority": "urgent",
+  "expected_docs": [
+   "ts-fhg7-output"
+  ]
+ },
+ "case": {
+  "inquiry": {
+   "id": "inq-0024",
+   "subject": "Smoke + burning smell FH-G7",
+   "body": "Running late so short version of a long day. Power went out on our road Thursday and I fired up the FH-G7 for the well pump and the fridge. Ran fine for the first hour, then I plugged in the space heater and the welder cord since I figured it could handle it, and about ten minutes later there was a hot electrical smell and a thin line of smoke coming off the control panel. I killed it and walked away. It's cooling in the shed now. Anyway what I actually need to know is what could cause that and if I can get the panel looked at or replaced. The warranty paperwork is somewhere in the truck. Serial is FH-G7-23-01954, I think, the sticker is half scratched. We still have no power at the house so please get back to me on my cell or email. Thanks.",
+   "sender_name": "Clyde Margolis",
+   "sender_org": null
+  },
+  "input_flags": [],
+  "route": {
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety_issue": true,
+   "confidence": 1.0,
+   "also_mentions": [],
+   "retrieve": true,
+   "search_query": "Subject: Smoke + burning smell FH-G7\nRunning late so short version of a long day. Power went out on our road Thursday and I fired up the FH-G7 for the well pump and the fridge. Ran fine for the first hour, then I plugged in the space heater and the welder cord since I figured it could handle it, and about ten minutes later there was a hot electrical smell and a thin line of smoke coming off the control panel. I killed it and walked away. It's cooling in the shed now. Anyway what I actually need ",
+   "reason": "keyword counts {'machine_trouble': 2, 'quality_complaint': 0, 'partner_request': 0, 'unclear_other': 0}"
+  },
+  "fields": {
+   "model": "FH-G7",
+   "serial": "FH-G7-23-01954",
+   "order_number": null
+  },
+  "retrieval_skipped_reason": null,
+  "retrieved": [
+   {
+    "doc_id": "ts-fhg7-output",
+    "title": "FH-G7 Troubleshooting: No Power at the Outlets",
+    "source_type": "troubleshooting",
+    "heading": "Safety first",
+    "text": "This guide covers an FH-G7 portable generator that runs but gives no power at the outlets. Never open the control panel while the engine runs. If you smell burning or see smoke from the control panel, shut off the engine, unplug everything, and do not run the unit again. Stop using the FH-G7 and contact Fernhollow.",
+    "score": 39.476
+   },
+   {
+    "doc_id": "ts-fhg7-nostart",
+    "title": "FH-G7 Troubleshooting: Will Not Start or Shuts Off",
+    "source_type": "troubleshooting",
+    "heading": "Safety first",
+    "text": "This guide covers an FH-G7 portable generator that will not start or shuts off. Use the generator outdoors only, because it makes carbon monoxide. If you see fuel leaking, smoke, or fire, or if you smell fuel strongly, stop using the FH-G7 and contact Fernhollow.",
+    "score": 23.844
+   },
+   {
+    "doc_id": "man-fhg7",
+    "title": "FH-G7 Portable Generator Owner's Manual",
+    "source_type": "manual",
+    "heading": "Carbon monoxide warning",
+    "text": "The FH-G7 makes carbon monoxide, a gas that has no smell and can kill. Use the generator outdoors only. Put it at least 20 feet from windows, doors, and vents. Never run it in a garage, a basement, a shed, or near an open window. If you feel dizzy, sick, or weak while the generator runs, move to fresh air and get medical help. Stop using the generator and contact Fernhollow.",
+    "score": 20.855
+   }
+  ],
+  "draft": {
+   "customer_ask": "Running late so short version of a long day.",
+   "facts_given": [
+    "model: FH-G7",
+    "serial: FH-G7-23-01954"
+   ],
+   "facts_missing": [],
+   "category": "machine trouble",
+   "cited_doc_ids": [
+    "ts-fhg7-output",
+    "ts-fhg7-nostart",
+    "man-fhg7"
+   ],
+   "next_steps": [
+    "Check the symptom against the cited troubleshooting steps.",
+    "Reply with the first steps to try, or book a service check."
+   ],
+   "holding_reply": "Thanks for contacting Fernhollow. Our service team will review the problem with your machine and reply with next steps. For your safety, please stop using the machine until we contact you."
+  },
+  "draft_guard": {
+   "passed": true,
+   "violations": []
+  },
+  "draft_removed": false,
+  "handoff": {
+   "team": "Service desk",
+   "cc": [
+    "Quality team"
+   ],
+   "priority": "urgent",
+   "added_steps": [
+    "Tell the sender to stop using the machine (safety escalation rule)."
+   ]
+  },
+  "usage": {},
+  "timings_ms": {
+   "guard_in": 0.1,
+   "route": 0.1,
+   "retrieve": 1.0,
+   "draft": 0.0
+  }
+ }
+}

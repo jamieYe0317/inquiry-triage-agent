@@ -1,0 +1,72 @@
+{
+ "label": "Business: message in Spanish",
+ "mode": "offline",
+ "recorded": "2026-11-07",
+ "expected": {
+  "type": "machine_trouble",
+  "segment": "b2b",
+  "team": "Service desk",
+  "priority": "high",
+  "expected_docs": [
+   "ts-fh340-jam"
+  ]
+ },
+ "case": {
+  "inquiry": {
+   "id": "inq-0485",
+   "subject": "Chipper FH-340 se atasca",
+   "body": "Buenas tardes. Le escribo de parte de nuestra empresa de jardinería. Nuestra astilladora FH-340 se atasca con frecuencia cuando trituramos ramas verdes, mojadas o con muchas hojas. Hemos limpiado la tolva y revisado las cuchillas, pero el problema sigue. Quisiéramos saber si hay algún ajuste o recomendación del fabricante. Número de serie FH340-23-08817. Agradecemos mucho su ayuda. Atentamente, Ricardo Salazar, gerente de operaciones, Paisajes Salazar.",
+   "sender_name": "Ricardo Salazar",
+   "sender_org": null
+  },
+  "input_flags": [],
+  "route": {
+   "type": "unclear_other",
+   "segment": "dtc",
+   "safety_issue": false,
+   "confidence": 0.3,
+   "also_mentions": [],
+   "retrieve": false,
+   "search_query": "",
+   "reason": "keyword counts {'machine_trouble': 0, 'quality_complaint': 0, 'partner_request': 0, 'unclear_other': 0}"
+  },
+  "fields": {
+   "model": "FH-340",
+   "serial": "FH340-23-08817",
+   "order_number": null
+  },
+  "retrieval_skipped_reason": "The router found no document that would help.",
+  "retrieved": [],
+  "draft": {
+   "customer_ask": "Buenas tardes.",
+   "facts_given": [
+    "model: FH-340",
+    "serial: FH340-23-08817"
+   ],
+   "facts_missing": [],
+   "category": "unclear other",
+   "cited_doc_ids": [],
+   "next_steps": [
+    "Read the message and decide who should handle it, or close it if it is spam."
+   ],
+   "holding_reply": "Thanks for your message. A member of our team will read it and reply."
+  },
+  "draft_guard": {
+   "passed": true,
+   "violations": []
+  },
+  "draft_removed": false,
+  "handoff": {
+   "team": "Front desk",
+   "cc": [],
+   "priority": "low",
+   "added_steps": []
+  },
+  "usage": {},
+  "timings_ms": {
+   "guard_in": 0.1,
+   "route": 0.1,
+   "draft": 0.0
+  }
+ }
+}

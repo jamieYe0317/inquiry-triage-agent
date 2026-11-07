@@ -1,0 +1,107 @@
+{
+ "label": "Customer: machine problem",
+ "mode": "offline",
+ "recorded": "2026-11-07",
+ "expected": {
+  "type": "machine_trouble",
+  "segment": "dtc",
+  "team": "Service desk",
+  "priority": "normal",
+  "expected_docs": [
+   "ts-fh210-hydraulic"
+  ]
+ },
+ "case": {
+  "inquiry": {
+   "id": "inq-0001",
+   "subject": "Splitter ram stuck out",
+   "body": "So we have a little cabin up north and the FH-210 comes out maybe four or five weekends a year, mostly when my husband decides we need a winter's worth of firewood in one go. Last Saturday it split about six logs just fine, and then on the seventh the ram went forward and just stayed there. Won't come back. The pump makes this high whiny sound the whole time I hold the lever, like it's working hard and getting nowhere. We shut it off and waited a while, tried again, same thing. Our serial is FH210-22-04471 if that helps. Is this something we can fix ourselves, or should we send it somewhere? We're only up there until Sunday and I'd love to have an answer before the next trip. Thanks so much, and the machine has been great otherwise!",
+   "sender_name": "Dana Whitcomb",
+   "sender_org": null
+  },
+  "input_flags": [],
+  "route": {
+   "type": "machine_trouble",
+   "segment": "dtc",
+   "safety_issue": true,
+   "confidence": 1.0,
+   "also_mentions": [],
+   "retrieve": true,
+   "search_query": "Subject: Splitter ram stuck out\nSo we have a little cabin up north and the FH-210 comes out maybe four or five weekends a year, mostly when my husband decides we need a winter's worth of firewood in one go. Last Saturday it split about six logs just fine, and then on the seventh the ram went forward and just stayed there. Won't come back. The pump makes this high whiny sound the whole time I hold the lever, like it's working hard and getting nowhere. We shut it off and waited a while, tried agai",
+   "reason": "keyword counts {'machine_trouble': 2, 'quality_complaint': 0, 'partner_request': 0, 'unclear_other': 0}"
+  },
+  "fields": {
+   "model": "FH-210",
+   "serial": "FH210-22-04471",
+   "order_number": null
+  },
+  "retrieval_skipped_reason": null,
+  "retrieved": [
+   {
+    "doc_id": "man-fh210",
+    "title": "FH-210 Log Splitter Owner's Manual",
+    "source_type": "manual",
+    "heading": "Safe operation",
+    "text": "Read this section before each use. Wear safety glasses, gloves, and boots with steel toes. Use the two-hand control. Hold the control lever with one hand and place the log with the other only while the ram is stopped. Keep your hands and feet away from the wedge. Stand clear of the wedge at all times when the ram moves. Never split a knotty log at an angle. A log that is not flat on the beam can shoot out and cause injury. Never let a child or a pet near the FH-210. If a part breaks, a hose bursts, or fluid sprays out, stop the engine. Stop using the machine and contact Fernhollow.",
+    "score": 32.264
+   },
+   {
+    "doc_id": "ts-fh210-hydraulic",
+    "title": "FH-210 Troubleshooting: Hydraulic Problems",
+    "source_type": "troubleshooting",
+    "heading": "Ram moves slowly, stalls on a log, or has weak splitting force",
+    "text": "Likely causes and checks, in order:\n1. Low fluid. Check the dipstick on a level machine. Add AW-32 hydraulic fluid if it is low.\n2. Wrong fluid. The FH-210 needs AW-32 only. A fluid that is too thick or too thin makes the ram slow and weak.\n3. Cold fluid. In cold weather, run the engine for 5 minutes with no load.\n4. Air in the system. Cycle the ram fully out and in several times with no log.\n5. Clogged filter. Check the hydraulic filter. Replace it if it is dirty.\n6. Relief valve. If the ram stalls on small logs, the relief valve may be set low or stuck. Do not adjust it yourself. Contact the Service desk.",
+    "score": 23.869
+   },
+   {
+    "doc_id": "ts-engine-general",
+    "title": "Small Engine Troubleshooting for All Fernhollow Machines",
+    "source_type": "troubleshooting",
+    "heading": "Scope and safety",
+    "text": "This guide covers gas engine problems on all five Fernhollow machines: the FH-210 log splitter, the FH-340 wood chipper, the FH-520 stump grinder, the FH-P90 pressure washer, and the FH-G7 generator. Turn off the engine and let it cool before you work on it. Do not smoke or use flame near fuel. If you see fuel leaking, smoke, or fire, stop using the machine and contact Fernhollow.",
+    "score": 14.341
+   }
+  ],
+  "draft": {
+   "customer_ask": "So we have a little cabin up north and the FH-210 comes out maybe four or five weekends a year, mostly when my husband decides we need a winter's worth of firewood in one go.",
+   "facts_given": [
+    "model: FH-210",
+    "serial: FH210-22-04471"
+   ],
+   "facts_missing": [],
+   "category": "machine trouble",
+   "cited_doc_ids": [
+    "man-fh210",
+    "ts-fh210-hydraulic",
+    "ts-engine-general"
+   ],
+   "next_steps": [
+    "Check the symptom against the cited troubleshooting steps.",
+    "Reply with the first steps to try, or book a service check."
+   ],
+   "holding_reply": "Thanks for contacting Fernhollow. Our service team will review the problem with your machine and reply with next steps. For your safety, please stop using the machine until we contact you."
+  },
+  "draft_guard": {
+   "passed": true,
+   "violations": []
+  },
+  "draft_removed": false,
+  "handoff": {
+   "team": "Service desk",
+   "cc": [
+    "Quality team"
+   ],
+   "priority": "urgent",
+   "added_steps": [
+    "Tell the sender to stop using the machine (safety escalation rule)."
+   ]
+  },
+  "usage": {},
+  "timings_ms": {
+   "guard_in": 0.1,
+   "route": 0.1,
+   "retrieve": 1.2,
+   "draft": 0.2
+  }
+ }
+}

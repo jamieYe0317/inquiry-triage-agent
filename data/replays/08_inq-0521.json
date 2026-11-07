@@ -1,0 +1,104 @@
+{
+ "label": "Business: not a support request",
+ "mode": "offline",
+ "recorded": "2026-11-07",
+ "expected": {
+  "type": "unclear_other",
+  "segment": "b2b",
+  "team": "Front desk",
+  "priority": "low",
+  "expected_docs": []
+ },
+ "case": {
+  "inquiry": {
+   "id": "inq-0521",
+   "subject": "Freight options for your shipments",
+   "body": "hi, i run a small farm supply store but we also have a little freight brokerage on the side that moves pallets of equipment around the region. wondering if you ever need a second carrier for deliveries to dealers in the midwest, our rates are competitive. can i send over a rate sheet and who would i send it to? thanks, Wes Kowalczyk, Kowalczyk Farm Supply & Freight",
+   "sender_name": "Wes Kowalczyk",
+   "sender_org": null
+  },
+  "input_flags": [],
+  "route": {
+   "type": "quality_complaint",
+   "segment": "b2b",
+   "safety_issue": false,
+   "confidence": 1.0,
+   "also_mentions": [],
+   "retrieve": true,
+   "search_query": "Subject: Freight options for your shipments\nhi, i run a small farm supply store but we also have a little freight brokerage on the side that moves pallets of equipment around the region. wondering if you ever need a second carrier for deliveries to dealers in the midwest, our rates are competitive. can i send over a rate sheet and who would i send it to? thanks, Wes Kowalczyk, Kowalczyk Farm Supply & Freight",
+   "reason": "keyword counts {'machine_trouble': 0, 'quality_complaint': 3, 'partner_request': 0, 'unclear_other': 0}"
+  },
+  "fields": {
+   "model": null,
+   "serial": null,
+   "order_number": null
+  },
+  "retrieval_skipped_reason": null,
+  "retrieved": [
+   {
+    "doc_id": "qa-freight-damage",
+    "title": "Freight Damage and Shipment Discrepancy Claims",
+    "source_type": "quality",
+    "heading": "Who this applies to",
+    "text": "This process is for dealers and distributors that receive pallet shipments from Fernhollow. It covers freight damage, wrong items, and short quantities.",
+    "score": 32.026
+   },
+   {
+    "doc_id": "qa-returns-dtc",
+    "title": "Returns and Damaged-on-Arrival Policy for Customers",
+    "source_type": "quality",
+    "heading": "Who this policy is for",
+    "text": "This policy is for people who bought a Fernhollow machine directly from Fernhollow. If you bought from a dealer, contact the dealer. Dealers and distributors should use the Partner Defect Report Procedure.",
+    "score": 9.039
+   },
+   {
+    "doc_id": "qa-defect-report",
+    "title": "Partner Defect Report Procedure",
+    "source_type": "quality",
+    "heading": "Who this procedure is for",
+    "text": "This procedure is for Fernhollow dealers and distributors. Use it to report a defect that you see on one or more Fernhollow units. Customers who bought direct should use the returns policy.",
+    "score": 7.9
+   }
+  ],
+  "draft": {
+   "customer_ask": "hi, i run a small farm supply store but we also have a little freight brokerage on the side that moves pallets of equipment around the region.",
+   "facts_given": [],
+   "facts_missing": [
+    "model",
+    "serial"
+   ],
+   "category": "quality complaint",
+   "cited_doc_ids": [
+    "qa-freight-damage",
+    "qa-returns-dtc",
+    "qa-defect-report"
+   ],
+   "next_steps": [
+    "Ask for photos and the order or serial number if they are missing.",
+    "Review the case under the cited policy and decide the remedy."
+   ],
+   "holding_reply": "Thanks for letting us know. A member of our team will review your report and contact you about next steps."
+  },
+  "draft_guard": {
+   "passed": true,
+   "violations": []
+  },
+  "draft_removed": false,
+  "handoff": {
+   "team": "Quality team",
+   "cc": [],
+   "priority": "high",
+   "added_steps": [
+    "Ask the sender for the model number.",
+    "Ask the sender for the serial number."
+   ]
+  },
+  "usage": {},
+  "timings_ms": {
+   "guard_in": 0.1,
+   "route": 0.1,
+   "retrieve": 0.7,
+   "draft": 0.0
+  }
+ }
+}
