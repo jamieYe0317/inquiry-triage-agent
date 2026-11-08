@@ -93,7 +93,11 @@ def render_case(case: Case, mode_note: str, expected: dict | None = None) -> Non
     notes.append(f"Router confidence {r.confidence:.2f}. {r.reason}")
     st.markdown("  \n".join(notes))
     if expected:
-        ok = expected["type"] == r.type.value and expected["team"] == h.team.value
+        ok = (
+            expected["type"] == r.type.value
+            and expected["team"] == h.team.value
+            and expected["priority"] == h.priority.value
+        )
         st.markdown(
             f"{'✅' if ok else '❌'} Golden label: `{expected['type']}` → **{expected['team']}**, "
             f"`{expected['priority']}`. Expected docs: {', '.join(expected['expected_docs']) or 'none'}."
