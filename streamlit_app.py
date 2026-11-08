@@ -71,11 +71,16 @@ PRIORITY_ICON = {"urgent": "🔴", "high": "🟠", "normal": "🔵", "low": "⚪
 def render_case(case: Case, mode_note: str, expected: dict | None = None) -> None:
     r, h = case.route, case.handoff
     st.caption(mode_note)
-    c1, c2, c3, c4 = st.columns(4)
-    c1.metric("Type", r.type.value.replace("_", " "))
-    c2.metric("Sender", "Business (B2B)" if r.segment.value == "b2b" else "Customer (DTC)")
-    c3.metric("Team", f"{TEAM_ICON.get(h.team.value, '')} {h.team.value}")
-    c4.metric("Priority", f"{PRIORITY_ICON[h.priority.value]} {h.priority.value}")
+    # Plain text, not st.metric: metric values are cut off with "..." on narrow screens.
+    tiles = [
+        ("Type", r.type.value.replace("_", " ")),
+        ("Sender", "Business (B2B)" if r.segment.value == "b2b" else "Customer (DTC)"),
+        ("Team", f"{TEAM_ICON.get(h.team.value, '')} {h.team.value}"),
+        ("Priority", f"{PRIORITY_ICON[h.priority.value]} {h.priority.value}"),
+    ]
+    for col, (label, value) in zip(st.columns(4), tiles, strict=True):
+        col.caption(label)
+        col.markdown(f"#### {value}")
     notes = []
     if r.safety_issue:
         notes.append("⚠️ **Safety issue.** Copied to the Quality team.")

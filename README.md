@@ -2,7 +2,7 @@
 
 An AI agent that sorts website inquiries for a small equipment distributor. It decides what each message is, looks up the right manual or policy, drafts a case summary, and hands the case to the right team. **A person always owns the reply.** The agent never promises a refund, a replacement, a price, or partner terms. Code enforces this rule.
 
-**Demo:** not deployed yet. · **Data:** 100% synthetic. · **Company:** Fernhollow Equipment Supply is invented.
+**Demo:** [inquiry-triage-agent.streamlit.app](https://inquiry-triage-agent.streamlit.app) (no sign-in). · **Data:** 100% synthetic. · **Company:** Fernhollow Equipment Supply is invented.
 
 This is a public twin of an inquiry-triage tool that I am designing for a small distributor. That tool is still in progress. This repo uses no data from that business.
 
@@ -96,7 +96,7 @@ For the LLM agent, set `ANTHROPIC_API_KEY` (see `.env.example`). Without a key, 
 
 ## Demo and cost limits
 
-The demo runs on Streamlit Community Cloud with no sign-in. The sample buttons show saved runs and cost nothing ([ADR 0004](docs/decisions/0004-replays-for-samples.md)). The "Write your own" tab calls the LLM, with these limits:
+The [demo](https://inquiry-triage-agent.streamlit.app) runs on Streamlit Community Cloud with no sign-in. The sample buttons show saved runs and cost nothing ([ADR 0004](docs/decisions/0004-replays-for-samples.md)). The "Write your own" tab calls the LLM, with these limits:
 
 - 10 live runs per visitor and 100 per day. After that, the tab runs the free baseline.
 - A 2,000-character input cap and a fixed `max_tokens` on each call.
